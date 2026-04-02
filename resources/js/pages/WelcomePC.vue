@@ -1,13 +1,22 @@
 <template>
-  <div class="welcome-pc">
-    <!-- 共通ローディングコンポーネント -->
+  <!-- 背景ラッパー -->
+  <div class="bgWrap">
+
+    <!-- 共通ローディング -->
     <LoadingPopup :visible="!loaded">
       端末に合わせて環境を準備中...
     </LoadingPopup>
 
-    <!-- メインコンテンツ -->
-    <h1>BOOM INSECTの箱庭（PC）</h1>
-    <p>PC専用のコンテンツや画像などをここに表示</p>
+    <!-- 中央コンテンツ -->
+    <div class="welcome-pc">
+
+      <h1>BOOM INSECTの箱庭</h1>
+      <p>世界中の甲虫たちに出会う図鑑サイト</p>
+
+      <!-- ここから下にカードUIなどを追加していく -->
+
+    </div>
+
   </div>
 </template>
 
@@ -25,9 +34,40 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.welcome-pc {
-  text-align: center;
-  margin-top: 50px;
+
+/* ===== 背景 ===== */
+.bgWrap{
+  min-height: 100vh;
+  background: url('/images/wallpaper.png') center top / cover no-repeat;
   position: relative;
 }
+
+/* 薄い白フィルター */
+.bgWrap::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.25);
+  pointer-events: none;
+}
+
+/* ===== 中身 ===== */
+.welcome-pc{
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+h1{
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+p{
+  font-size: 16px;
+  color: #555;
+}
+
 </style>
