@@ -1,0 +1,17 @@
+﻿{
+  "id": "sp-005",
+  "slug": "attacus-atlas",
+  "name_latin": "Attacus atlas",
+  "name_ja": "ヨナグニサン",
+  "genus": "Attacus",
+  "family_group": "others",
+  "region": ["東南アジア", "台湾"],
+  "aliases": ["Atlas moth", "アトラスガ"],
+  "description": "今回は『その他』グループの動作確認用として、甲虫以外の大型昆虫も含められる柔軟な構造にしています。拡張時の例として扱えるサンプルです。",
+  "images": {
+    "thumb": "/images/species/attacus-atlas/thumb.svg",
+    "medium": "/images/species/attacus-atlas/medium.svg",
+    "large": "/images/species/attacus-atlas/large.svg"
+  },
+  "related_species": ["heterorrhina-elegans", "dynastes-hercules"]
+}

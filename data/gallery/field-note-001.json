@@ -1,0 +1,13 @@
+﻿{
+  "id": "gal-001",
+  "species_slug": "dynastes-hercules",
+  "title": "樹液場でのヘラクレス",
+  "photographer": "Sample Collector",
+  "location": "エクアドル",
+  "caption": "大型個体の雰囲気が伝わる展示用サンプルです。",
+  "images": {
+    "thumb": "/images/gallery/field-note-001/thumb.svg",
+    "medium": "/images/gallery/field-note-001/medium.svg",
+    "large": "/images/gallery/field-note-001/large.svg"
+  }
+}

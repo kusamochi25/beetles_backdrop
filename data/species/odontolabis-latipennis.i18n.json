@@ -1,0 +1,94 @@
+{
+  "id": "sp-007",
+  "updated_at": "2026-04-14",
+  "slug": "odontolabis-latipennis",
+  "name_latin": "Odontolabis latipennis",
+  "name": {
+    "ja": "ラティペニスツヤクワガタ",
+    "en": "Odontolabis latipennis",
+    "zh": "Odontolabis latipennis",
+    "ko": "Odontolabis latipennis",
+    "es": "Odontolabis latipennis",
+    "th": "Odontolabis latipennis",
+    "fr": "Odontolabis latipennis"
+  },
+  "genus": "Odontolabis",
+  "family_group": "kuwagata",
+  "region": {
+    "ja": "",
+    "en": "",
+    "zh": "",
+    "ko": "",
+    "es": "",
+    "th": "",
+    "fr": ""
+  },
+  "aliases": {
+    "ja": [
+      "ラティペニスツヤクワガタ",
+      "ラティペンニスツヤクワガタ"
+    ],
+    "en": [
+      "Odontolabis latipennis"
+    ],
+    "zh": [
+      "Odontolabis latipennis"
+    ],
+    "ko": [
+      "Odontolabis latipennis"
+    ],
+    "es": [
+      "Odontolabis latipennis"
+    ],
+    "th": [
+      "Odontolabis latipennis"
+    ],
+    "fr": [
+      "Odontolabis latipennis"
+    ]
+  },
+  "description": {
+    "ja": "種名の由来は幅広い(lati)上翅(pennis)という意味。70mmを超えても短歯なところから、大歯はないのではないか、と言われている。",
+    "en": "The species name means broad (lati) elytra (pennis). Because even individuals exceeding 70 mm still show short mandibles, it is said that this species may not have a major form.",
+    "zh": "种名的词源意为宽阔的（lati）鞘翅（pennis）。据说即使体长超过 70 毫米，仍表现为短牙型，因此可能不存在大牙型。",
+    "ko": "종명의 어원은 넓은(lati) 딱지날개(pennis)라는 뜻입니다. 70mm를 넘어도 짧은 턱 형태를 보이기 때문에, 대치형이 없는 것이 아닐까라고 여겨집니다.",
+    "es": "El origen del nombre de la especie significa élitros anchos (lati + pennis). Como incluso los individuos que superan los 70 mm siguen mostrando mandíbulas cortas, se dice que quizá esta especie no tenga una forma mayor.",
+    "th": "ที่มาของชื่อชนิดหมายถึงปีกแข็งที่กว้าง (lati + pennis) ว่ากันว่าแม้ตัวที่ยาวเกิน 70 มม. ก็ยังคงมีกรามสั้น จึงอาจเป็นไปได้ว่าชนิดนี้ไม่มีรูปแบบกรามใหญ่",
+    "fr": "L’étymologie du nom d’espèce signifie élytres larges (lati + pennis). Comme même les individus dépassant 70 mm présentent encore des mandibules courtes, on dit qu’il est possible que cette espèce n’ait pas de grande forme."
+  },
+  "references": [
+    {
+      "citation": "参考文献はここに追加します。著者名, 年, 論文名, 雑誌名, 巻(号): ページ."
+    }
+  ],
+  "images": [
+    {
+      "thumb": "/images/species/odontolabis-latipennis/01_thumb.webp",
+      "medium": "/images/species/odontolabis-latipennis/01_medium.webp",
+      "large": "/images/species/odontolabis-latipennis/01_large.webp",
+      "caption": {
+        "ja": "標本写真 1",
+        "en": "specimen photo 1",
+        "zh": "标本照片 1",
+        "ko": "표본 사진 1",
+        "es": "foto de ejemplar 1",
+        "th": "ภาพตัวอย่าง 1",
+        "fr": "photo de spécimen 1"
+      }
+    },
+    {
+      "thumb": "/images/species/odontolabis-latipennis/02_thumb.webp",
+      "medium": "/images/species/odontolabis-latipennis/02_medium.webp",
+      "large": "/images/species/odontolabis-latipennis/02_large.webp",
+      "caption": {
+        "ja": "標本写真 2",
+        "en": "specimen photo 2",
+        "zh": "标本照片 2",
+        "ko": "표본 사진 2",
+        "es": "foto de ejemplar 2",
+        "th": "ภาพตัวอย่าง 2",
+        "fr": "photo de spécimen 2"
+      }
+    }
+  ]
+}

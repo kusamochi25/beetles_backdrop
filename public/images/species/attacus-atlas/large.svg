@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-label="Attacus atlas">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f3a5f" />
+      <stop offset="100%" stop-color="#4f86c6" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" rx="28" fill="url(#bg)" />
+  <circle cx="1216" cy="264" r="256" fill="#d6ecff" opacity="0.28" />
+  <path d="M544 275 C448 462, 448 715, 800 836 C1152 715, 1152 462, 1056 275" fill="#d6ecff" opacity="0.42" />
+  <text x="50%" y="49%" text-anchor="middle" fill="#ffffff" font-size="114" font-family="Verdana, sans-serif" letter-spacing="1">Attacus atlas</text>
+  <text x="50%" y="64%" text-anchor="middle" fill="#ffffff" fill-opacity="0.86" font-size="57" font-family="Verdana, sans-serif">1600x1100</text>
+</svg>

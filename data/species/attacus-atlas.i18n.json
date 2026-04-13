@@ -1,0 +1,49 @@
+{
+  "id": "sp-005",
+  "updated_at": "2026-04-06",
+  "slug": "attacus-atlas",
+  "name_latin": "Attacus atlas",
+  "name": {
+    "ja": "ヨナグニサン",
+    "en": "Atlas moth",
+    "zh": "阿特拉斯蛾",
+    "ko": "아틀라스나방",
+    "es": "Polilla atlas",
+    "th": "ผีเสื้อกลางคืนแอตลาส",
+    "fr": "Atlas géant"
+  },
+  "genus": "Attacus",
+  "family_group": "others",
+  "region": {
+    "ja": "東南アジア / 台湾",
+    "en": "Southeast Asia / Taiwan",
+    "zh": "东南亚 / 台湾",
+    "ko": "동남아시아 / 대만",
+    "es": "Sudeste asiático / Taiwán",
+    "th": "เอเชียตะวันออกเฉียงใต้ / ไต้หวัน",
+    "fr": "Asie du Sud-Est / Taïwan"
+  },
+  "aliases": {
+    "ja": ["アトラスガ", "ヨナグニサン"],
+    "en": ["Atlas moth"],
+    "zh": ["大蚕蛾"],
+    "ko": ["아틀라스나방"],
+    "es": ["Mariposa atlas"],
+    "th": ["ผีเสื้อแอตลาส"],
+    "fr": ["Papillon atlas"]
+  },
+  "description": {
+    "ja": "今回は『その他』グループの動作確認用として、甲虫以外の大型昆虫も含められる柔軟な構造にしています。拡張時の例として扱えるサンプルです。",
+    "en": "This sample sits in the “Others” group to confirm that the data model can also hold large insects outside beetles when the atlas expands.",
+    "zh": "该样本被放入“其他”分组，用于确认数据模型在扩展时也能容纳甲虫之外的大型昆虫。",
+    "ko": "이 샘플은 '기타' 그룹에 두어, 도감 확장 시 딱정벌레 외의 대형 곤충도 담을 수 있음을 확인하기 위한 예시입니다.",
+    "es": "Esta muestra se coloca en el grupo “Otros” para confirmar que el modelo también puede incluir grandes insectos fuera de los escarabajos.",
+    "th": "ตัวอย่างนี้อยู่ในกลุ่ม “อื่น ๆ” เพื่อยืนยันว่าโครงสร้างข้อมูลสามารถรองรับแมลงขนาดใหญ่นอกกลุ่มด้วงได้เมื่อขยายเว็บไซต์",
+    "fr": "Cet exemple est placé dans le groupe “Autres” afin de vérifier que le modèle peut aussi accueillir de grands insectes autres que les coléoptères lors des extensions futures."
+  },
+  "images": {
+    "thumb": "/images/species/attacus-atlas/thumb.svg",
+    "medium": "/images/species/attacus-atlas/medium.svg",
+    "large": "/images/species/attacus-atlas/large.svg"
+  }
+}

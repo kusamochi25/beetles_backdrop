@@ -1,0 +1,17 @@
+﻿{
+  "id": "sp-001",
+  "slug": "dynastes-hercules",
+  "name_latin": "Dynastes hercules",
+  "name_ja": "ヘラクレスオオカブト",
+  "genus": "Dynastes",
+  "family_group": "kabutomushi",
+  "region": ["中南米", "カリブ海地域"],
+  "aliases": ["ヘラクレス", "Hercules beetle"],
+  "description": "世界最大級のカブトムシとして知られる大型種です。長い角と強い存在感を持ち、図鑑の代表的な掲載種として扱いやすいサンプルです。",
+  "images": {
+    "thumb": "/images/species/dynastes-hercules/thumb.svg",
+    "medium": "/images/species/dynastes-hercules/medium.svg",
+    "large": "/images/species/dynastes-hercules/large.svg"
+  },
+  "related_species": ["dynastes-neptunus", "attacus-atlas"]
+}

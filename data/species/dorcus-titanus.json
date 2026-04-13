@@ -1,0 +1,17 @@
+﻿{
+  "id": "sp-003",
+  "slug": "dorcus-titanus",
+  "name_latin": "Dorcus titanus",
+  "name_ja": "タイタンオオクワガタ",
+  "genus": "Dorcus",
+  "family_group": "kuwagata",
+  "region": ["東南アジア", "東アジア"],
+  "aliases": ["タイタン", "Titan stag beetle"],
+  "description": "大型のクワガタムシとして人気の高いグループです。クワガタ一覧と検索導線の確認に使いやすいよう、分かりやすい情報に絞っています。",
+  "images": {
+    "thumb": "/images/species/dorcus-titanus/thumb.svg",
+    "medium": "/images/species/dorcus-titanus/medium.svg",
+    "large": "/images/species/dorcus-titanus/large.svg"
+  },
+  "related_species": ["dynastes-neptunus", "heterorrhina-elegans"]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "sp-004",
+  "slug": "heterorrhina-elegans",
+  "name_latin": "Heterorrhina elegans",
+  "name_ja": "エレガンスカナブン",
+  "genus": "Heterorrhina",
+  "family_group": "kanabun",
+  "region": ["インド", "ネパール"],
+  "aliases": ["ジュエルカナブン", "Elegant flower beetle"],
+  "description": "金属光沢の美しさが目立つカナブンの仲間です。色彩の違うグループを入れることで、一覧ページやギャラリーの見え方を確認しやすくしています。",
+  "images": {
+    "thumb": "/images/species/heterorrhina-elegans/thumb.svg",
+    "medium": "/images/species/heterorrhina-elegans/medium.svg",
+    "large": "/images/species/heterorrhina-elegans/large.svg"
+  },
+  "related_species": ["dorcus-titanus", "attacus-atlas"]
+}

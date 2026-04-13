@@ -1,0 +1,80 @@
+﻿{
+  "id": "sp-006",
+  "updated_at": "2026-04-10",
+  "slug": "kirchnerius-parryi",
+  "name_latin": "Kirchnerius parryi",
+  "name": {
+    "ja": "パリーシカノコギリクワガタ",
+    "en": "Parry's stag beetle",
+    "zh": "帕里鹿角锹形虫",
+    "ko": "패리사슴벌레",
+    "es": "Escarabajo ciervo de Parry",
+    "th": "ด้วงคีมแพร์รี",
+    "fr": "Lucane de Parry"
+  },
+  "genus": "Kirchnerius",
+  "family_group": "kuwagata",
+  "region": {
+    "ja": "ネパール / インド",
+    "en": "Nepal / India",
+    "zh": "尼泊尔 / 印度",
+    "ko": "네팔 / 인도",
+    "es": "Nepal / India",
+    "th": "เนปาล / อินเดีย",
+    "fr": "Népal / Inde"
+  },
+  "aliases": {
+    "ja": [
+      "パリーシカノコギリクワガタ",
+      "パリーノコギリクワガタ"
+    ],
+    "en": [
+      "Parry's stag beetle"
+    ],
+    "zh": [
+      "帕里鹿角锹形虫"
+    ],
+    "ko": [
+      "패리사슴벌레"
+    ],
+    "es": [
+      "Escarabajo ciervo de Parry"
+    ],
+    "th": [
+      "ด้วงคีมแพร์รี"
+    ],
+    "fr": [
+      "Lucane de Parry"
+    ]
+  },
+  "description": {
+    "ja": "インドからネパールにかけてヒマラヤ系山脈に生息するクワガタ。地域変異があり、ネパールやアルナーチャル州の個体は小さい。似ている種として、デンディフェルノコギリがいる。",
+    "en": "A stag beetle inhabiting the Himalayan mountain ranges from India to Nepal. It shows regional variation, and individuals from Nepal and Arunachal Pradesh tend to be small. A similar species is Prosopocoilus dendifer.",
+    "zh": "这是一种分布于印度至尼泊尔喜马拉雅山系的锹形虫。该种存在地域差异，尼泊尔与阿鲁纳恰尔邦的个体较小。与之相似的种类有 Prosopocoilus dendifer。",
+    "ko": "인도에서 네팔에 이르는 히말라야 산지에 서식하는 사슴벌레입니다. 지역 변이가 있으며, 네팔과 아루나찰프라데시의 개체는 작은 편입니다. 비슷한 종으로는 Prosopocoilus dendifer가 있습니다.",
+    "es": "Es un escarabajo ciervo que habita en la cordillera del Himalaya desde India hasta Nepal. Presenta variación regional, y los individuos de Nepal y Arunachal Pradesh son pequeños. Una especie similar es Prosopocoilus dendifer.",
+    "th": "เป็นด้วงคีมที่อาศัยอยู่ตามแนวเทือกเขาหิมาลัยตั้งแต่อินเดียถึงเนปาล มีความแปรผันตามถิ่นอาศัย และตัวจากเนปาลกับอรุณาจัลประเทศมีขนาดเล็ก ชนิดที่คล้ายกันคือ Prosopocoilus dendifer",
+    "fr": "C’est un lucane qui vit dans la chaîne himalayenne de l’Inde au Népal. L’espèce présente des variations régionales, et les individus du Népal et de l’Arunachal Pradesh sont de petite taille. Une espèce proche est Prosopocoilus dendifer."
+  },
+  "references": [
+    {
+      "citation": "参考文献はここに追加します。著者名, 年, 論文名, 雑誌名, 巻(号): ページ."
+    }
+  ],
+  "images": [
+    {
+      "thumb": "/images/species/kirchnerius-parryi/01_thumb.webp",
+      "medium": "/images/species/kirchnerius-parryi/01_medium.webp",
+      "large": "/images/species/kirchnerius-parryi/01_large.webp",
+      "caption": {
+        "ja": "オス背面",
+        "en": "male dorsal view",
+        "zh": "雄虫背面",
+        "ko": "수컷 등면",
+        "es": "vista dorsal del macho",
+        "th": "มุมมองด้านหลังของตัวผู้",
+        "fr": "vue dorsale du mâle"
+      }
+    }
+  ]
+}

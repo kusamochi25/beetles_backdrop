@@ -1,0 +1,17 @@
+﻿{
+  "id": "sp-002",
+  "slug": "dynastes-neptunus",
+  "name_latin": "Dynastes neptunus",
+  "name_ja": "ネプチューンオオカブト",
+  "genus": "Dynastes",
+  "family_group": "kabutomushi",
+  "region": ["コロンビア", "ペルー", "エクアドル"],
+  "aliases": ["ネプチューン", "Neptune beetle"],
+  "description": "ヘラクレスに近い人気を持つ大型のカブトムシです。同じ Dynastes 属に置くことで、属ページや前後リンクの挙動を確認しやすくしています。",
+  "images": {
+    "thumb": "/images/species/dynastes-neptunus/thumb.svg",
+    "medium": "/images/species/dynastes-neptunus/medium.svg",
+    "large": "/images/species/dynastes-neptunus/large.svg"
+  },
+  "related_species": ["dynastes-hercules", "dorcus-titanus"]
+}

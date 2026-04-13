@@ -1,0 +1,49 @@
+{
+  "id": "sp-001",
+  "updated_at": "2026-04-10",
+  "slug": "dynastes-hercules",
+  "name_latin": "Dynastes hercules",
+  "name": {
+    "ja": "ヘラクレスオオカブト",
+    "en": "Hercules beetle",
+    "zh": "赫拉克勒斯甲虫",
+    "ko": "헤라클레스장수풍뎅이",
+    "es": "Escarabajo Hércules",
+    "th": "ด้วงเฮอร์คิวลิส",
+    "fr": "Scarabée Hercule"
+  },
+  "genus": "Dynastes",
+  "family_group": "kabutomushi",
+  "region": {
+    "ja": "中南米 / カリブ海地域",
+    "en": "Central and South America / Caribbean",
+    "zh": "中南美洲 / 加勒比地区",
+    "ko": "중남미 / 카리브 해 지역",
+    "es": "Centro y Sudamérica / Caribe",
+    "th": "อเมริกากลางและใต้ / แคริบเบียน",
+    "fr": "Amérique centrale et du Sud / Caraïbes"
+  },
+  "aliases": {
+    "ja": ["ヘラクレス", "ヘラクレスカブト"],
+    "en": ["Hercules beetle"],
+    "zh": ["赫拉克勒斯兜虫"],
+    "ko": ["헤라클레스장수풍뎅이"],
+    "es": ["Escarabajo Hércules"],
+    "th": ["ด้วงเฮอร์คิวลิส"],
+    "fr": ["Scarabée Hercule"]
+  },
+  "description": {
+    "ja": "世界最大級のカブトムシとして知られる大型種です。長い角と強い存在感を持ち、図鑑の代表的な掲載種として扱いやすいサンプルです。",
+    "en": "A very large rhinoceros beetle known as one of the biggest in the world. Its long horns and strong silhouette make it a reliable flagship sample for the atlas.",
+    "zh": "这是一种以世界最大级兜虫之一而闻名的大型种，拥有修长的角与强烈的存在感，非常适合作为图鉴代表样本。",
+    "ko": "세계 최대급 장수풍뎅이로 알려진 대형종입니다. 긴 뿔과 강한 존재감 덕분에 도감 대표 샘플로 쓰기 좋습니다.",
+    "es": "Es una especie grande conocida como uno de los escarabajos rinoceronte más grandes del mundo. Sus largos cuernos y su silueta poderosa la convierten en una gran especie emblemática.",
+    "th": "เป็นด้วงกว่างขนาดใหญ่ที่ขึ้นชื่อว่าใหญ่ที่สุดชนิดหนึ่งของโลก เขายาวและรูปร่างโดดเด่นจึงเหมาะเป็นตัวอย่างหลักของสารานุกรมนี้",
+    "fr": "Grande espèce connue comme l’un des plus grands scarabées rhinocéros du monde. Ses longues cornes et sa forte présence en font un excellent échantillon emblématique."
+  },
+  "images": {
+    "thumb": "/images/species/dynastes-hercules/thumb.svg",
+    "medium": "/images/species/dynastes-hercules/medium.svg",
+    "large": "/images/species/dynastes-hercules/large.svg"
+  }
+}

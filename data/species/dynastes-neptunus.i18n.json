@@ -1,0 +1,49 @@
+{
+  "id": "sp-002",
+  "updated_at": "2026-04-09",
+  "slug": "dynastes-neptunus",
+  "name_latin": "Dynastes neptunus",
+  "name": {
+    "ja": "ネプチューンオオカブト",
+    "en": "Neptune beetle",
+    "zh": "海神大兜虫",
+    "ko": "넵튠장수풍뎅이",
+    "es": "Escarabajo Neptuno",
+    "th": "ด้วงเนปจูน",
+    "fr": "Scarabée Neptune"
+  },
+  "genus": "Dynastes",
+  "family_group": "kabutomushi",
+  "region": {
+    "ja": "コロンビア / ペルー / エクアドル",
+    "en": "Colombia / Peru / Ecuador",
+    "zh": "哥伦比亚 / 秘鲁 / 厄瓜多尔",
+    "ko": "콜롬비아 / 페루 / 에콰도르",
+    "es": "Colombia / Perú / Ecuador",
+    "th": "โคลอมเบีย / เปรู / เอกวาดอร์",
+    "fr": "Colombie / Pérou / Équateur"
+  },
+  "aliases": {
+    "ja": ["ネプチューン", "ネプチューンカブト"],
+    "en": ["Neptune beetle"],
+    "zh": ["海神兜虫"],
+    "ko": ["넵튠장수풍뎅이"],
+    "es": ["Escarabajo Neptuno"],
+    "th": ["ด้วงเนปจูน"],
+    "fr": ["Scarabée Neptune"]
+  },
+  "description": {
+    "ja": "ヘラクレスに近い属の代表種で、長い胸角と頭角のバランスが美しい大型カブトムシです。属ページや前後リンクの動作確認に向いています。",
+    "en": "A large Dynastes species closely related to the Hercules beetle, with an elegant balance between the thoracic and head horns. It works well for testing genus navigation.",
+    "zh": "这是与赫拉克勒斯兜虫同属的代表种之一，胸角与头角的比例十分优美，也适合用于测试属页面与前后导航。",
+    "ko": "헤라클레스와 가까운 같은 속의 대표종으로, 가슴뿔과 머리뿔의 균형이 아름다운 대형 장수풍뎅이입니다. 속 페이지 테스트에 잘 맞습니다.",
+    "es": "Es una gran especie del mismo género que el Hércules, con un equilibrio elegante entre el cuerno torácico y el cefálico. Resulta útil para probar la navegación por género.",
+    "th": "เป็นด้วงกว่างขนาดใหญ่ในสกุลเดียวกับเฮอร์คิวลิส มีสัดส่วนเขาอกและเขาหัวที่สวยงาม เหมาะสำหรับทดสอบหน้า genus",
+    "fr": "Grande espèce du même genre que le scarabée Hercule, avec un bel équilibre entre les cornes thoracique et céphalique. Elle convient bien aux tests de navigation par genre."
+  },
+  "images": {
+    "thumb": "/images/species/dynastes-neptunus/thumb.svg",
+    "medium": "/images/species/dynastes-neptunus/medium.svg",
+    "large": "/images/species/dynastes-neptunus/large.svg"
+  }
+}

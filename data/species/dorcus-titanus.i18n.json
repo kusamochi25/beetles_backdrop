@@ -1,0 +1,49 @@
+{
+  "id": "sp-003",
+  "updated_at": "2026-04-08",
+  "slug": "dorcus-titanus",
+  "name_latin": "Dorcus titanus",
+  "name": {
+    "ja": "タイタンオオクワガタ",
+    "en": "Titan stag beetle",
+    "zh": "泰坦锹形虫",
+    "ko": "타이탄사슴벌레",
+    "es": "Escarabajo ciervo Titán",
+    "th": "ด้วงคีมไททัน",
+    "fr": "Lucane Titan"
+  },
+  "genus": "Dorcus",
+  "family_group": "kuwagata",
+  "region": {
+    "ja": "東南アジア / 東アジア",
+    "en": "Southeast Asia / East Asia",
+    "zh": "东南亚 / 东亚",
+    "ko": "동남아시아 / 동아시아",
+    "es": "Sudeste asiático / Asia oriental",
+    "th": "เอเชียตะวันออกเฉียงใต้ / เอเชียตะวันออก",
+    "fr": "Asie du Sud-Est / Asie de l’Est"
+  },
+  "aliases": {
+    "ja": ["タイタン", "タイタンオオクワ"],
+    "en": ["Titan stag beetle"],
+    "zh": ["泰坦大锹"],
+    "ko": ["타이탄사슴벌레"],
+    "es": ["Escarabajo Titán"],
+    "th": ["ด้วงคีมไททัน"],
+    "fr": ["Lucane Titan"]
+  },
+  "description": {
+    "ja": "大型のクワガタムシとして人気の高いグループです。クワガタ一覧と検索挙動の確認に使いやすいよう、分かりやすい名前で構成したサンプルです。",
+    "en": "A popular large stag beetle used here as a clear sample for list browsing and search behavior within the stag beetle group.",
+    "zh": "这是一种很受欢迎的大型锹形虫，在这里作为便于测试列表浏览与搜索行为的清晰样本。",
+    "ko": "대형 사슴벌레로 인기가 높은 종으로, 목록 탐색과 검색 동작 확인용 샘플로 쓰기 좋습니다.",
+    "es": "Es un gran escarabajo ciervo muy popular, usado aquí como muestra clara para probar listados y comportamiento de búsqueda.",
+    "th": "เป็นด้วงคีมขนาดใหญ่ที่ได้รับความนิยมสูง ใช้เป็นตัวอย่างที่ดูเข้าใจง่ายสำหรับการทดสอบรายการและการค้นหา",
+    "fr": "Grand lucane très apprécié, utilisé ici comme échantillon clair pour tester les listes et le comportement de recherche."
+  },
+  "images": {
+    "thumb": "/images/species/dorcus-titanus/thumb.svg",
+    "medium": "/images/species/dorcus-titanus/medium.svg",
+    "large": "/images/species/dorcus-titanus/large.svg"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "gal-002",
+  "species_slug": "heterorrhina-elegans",
+  "title": {
+    "ja": "朝日に映えるエレガンスカナブン",
+    "en": "Elegant flower chafer in morning light",
+    "zh": "晨光中的优雅花金龟",
+    "ko": "아침 햇살 속 엘레강스꽃무지",
+    "es": "Cetónido elegante bajo la luz de la mañana",
+    "th": "ด้วงดอกไม้เอเลแกนซ์ยามเช้า",
+    "fr": "Cétoine élégante dans la lumière du matin"
+  },
+  "credit": {
+    "name": "@sample_collector",
+    "url": "https://x.com/sample_collector"
+  },
+  "tags": ["bred", "adult"],
+  "location": {
+    "ja": "ネパール",
+    "en": "Nepal",
+    "zh": "尼泊尔",
+    "ko": "네팔",
+    "es": "Nepal",
+    "th": "เนปาล",
+    "fr": "Népal"
+  },
+  "caption": {
+    "ja": "光沢と色彩の確認に向いたサンプルです。",
+    "en": "A sample suitable for checking gloss and coloration.",
+    "zh": "适合确认光泽与色彩表现的样本。",
+    "ko": "광택과 색감을 확인하기 좋은 샘플입니다.",
+    "es": "Una muestra adecuada para comprobar brillo y coloración.",
+    "th": "ตัวอย่างที่เหมาะสำหรับดูความเงาและสีสัน",
+    "fr": "Un échantillon adapté pour vérifier l’éclat et la coloration."
+  },
+  "images": {
+    "thumb": "/images/gallery/field-note-002/thumb.svg",
+    "medium": "/images/gallery/field-note-002/medium.svg",
+    "large": "/images/gallery/field-note-002/large.svg"
+  }
+}

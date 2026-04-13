@@ -1,0 +1,49 @@
+{
+  "id": "sp-004",
+  "updated_at": "2026-04-07",
+  "slug": "heterorrhina-elegans",
+  "name_latin": "Heterorrhina elegans",
+  "name": {
+    "ja": "エレガンスカナブン",
+    "en": "Elegant flower chafer",
+    "zh": "优雅花金龟",
+    "ko": "엘레강스꽃무지",
+    "es": "Cetónido elegante",
+    "th": "ด้วงดอกไม้เอเลแกนซ์",
+    "fr": "Cétoine élégante"
+  },
+  "genus": "Heterorrhina",
+  "family_group": "kanabun",
+  "region": {
+    "ja": "ネパール / インド北東部",
+    "en": "Nepal / Northeastern India",
+    "zh": "尼泊尔 / 印度东北部",
+    "ko": "네팔 / 인도 북동부",
+    "es": "Nepal / Noreste de India",
+    "th": "เนปาล / อินเดียตะวันออกเฉียงเหนือ",
+    "fr": "Népal / Nord-Est de l’Inde"
+  },
+  "aliases": {
+    "ja": ["エレガンス", "エレガンスカナブン"],
+    "en": ["Elegant flower chafer"],
+    "zh": ["优雅金龟子"],
+    "ko": ["엘레강스꽃무지"],
+    "es": ["Cetónido elegante"],
+    "th": ["ด้วงดอกไม้เอเลแกนซ์"],
+    "fr": ["Cétoine élégante"]
+  },
+  "description": {
+    "ja": "光沢の強い体色が目を引くカナブングループのサンプルです。色彩系の検索や、甲虫内でも雰囲気の違うカード表示を確認できます。",
+    "en": "A glossy flower chafer sample chosen to contrast with the heavier beetles and to check how colorful species appear in cards and search results.",
+    "zh": "这是一个体色光泽非常醒目的花金龟样本，可用于确认色彩系物种在卡片与搜索结果中的展示效果。",
+    "ko": "광택이 강한 몸색이 돋보이는 꽃무지 샘플로, 화려한 종이 카드와 검색 결과에서 어떻게 보이는지 확인하기 좋습니다.",
+    "es": "Es una muestra de cetónido de brillo intenso, útil para comprobar cómo se ven las especies coloridas en tarjetas y resultados de búsqueda.",
+    "th": "เป็นตัวอย่างด้วงดอกไม้ที่มีลำตัวมันวาวเด่น ใช้ตรวจสอบการแสดงผลของชนิดที่มีสีสันในบัตรและผลค้นหาได้ดี",
+    "fr": "Un échantillon de cétoine très brillante, utile pour vérifier l’affichage d’espèces colorées dans les cartes et les résultats de recherche."
+  },
+  "images": {
+    "thumb": "/images/species/heterorrhina-elegans/thumb.svg",
+    "medium": "/images/species/heterorrhina-elegans/medium.svg",
+    "large": "/images/species/heterorrhina-elegans/large.svg"
+  }
+}

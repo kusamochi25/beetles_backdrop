@@ -1,0 +1,41 @@
+{
+  "id": "gal-003",
+  "species_slug": "dorcus-titanus",
+  "title": {
+    "ja": "朽木上のタイタンオオクワガタ",
+    "en": "Titan stag beetle on decayed wood",
+    "zh": "朽木上的泰坦锹形虫",
+    "ko": "썩은 나무 위의 타이탄사슴벌레",
+    "es": "Escarabajo Titán sobre madera en descomposición",
+    "th": "ด้วงคีมไททันบนไม้ผุ",
+    "fr": "Lucane Titan sur bois mort"
+  },
+  "credit": {
+    "name": "@sample_collector",
+    "url": "https://x.com/sample_collector"
+  },
+  "tags": ["wild", "adult"],
+  "location": {
+    "ja": "インドネシア",
+    "en": "Indonesia",
+    "zh": "印度尼西亚",
+    "ko": "인도네시아",
+    "es": "Indonesia",
+    "th": "อินโดนีเซีย",
+    "fr": "Indonésie"
+  },
+  "caption": {
+    "ja": "力強い顎の印象を伝える展示用イメージです。",
+    "en": "A display image highlighting the strong impression of its mandibles.",
+    "zh": "用于表现其强劲大颚印象的展示图像。",
+    "ko": "강한 턱의 인상을 전달하는 전시용 이미지입니다.",
+    "es": "Una imagen de exhibición que resalta la fuerza de sus mandíbulas.",
+    "th": "ภาพสำหรับนำเสนอความแข็งแรงของกรามที่โดดเด่น",
+    "fr": "Une image de présentation qui met en valeur la puissance de ses mandibules."
+  },
+  "images": {
+    "thumb": "/images/gallery/field-note-003/thumb.svg",
+    "medium": "/images/gallery/field-note-003/medium.svg",
+    "large": "/images/gallery/field-note-003/large.svg"
+  }
+}

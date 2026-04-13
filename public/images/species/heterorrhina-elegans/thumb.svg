@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" role="img" aria-label="Heterorrhina elegans">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f5132" />
+      <stop offset="100%" stop-color="#1f9d73" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="28" fill="url(#bg)" />
+  <circle cx="365" cy="77" r="77" fill="#c9f4da" opacity="0.28" />
+  <path d="M163 80 C134 134, 134 208, 240 243 C346 208, 346 134, 317 80" fill="#c9f4da" opacity="0.42" />
+  <text x="50%" y="49%" text-anchor="middle" fill="#ffffff" font-size="34" font-family="Verdana, sans-serif" letter-spacing="1">Heterorrhina elegans</text>
+  <text x="50%" y="64%" text-anchor="middle" fill="#ffffff" fill-opacity="0.86" font-size="17" font-family="Verdana, sans-serif">480x320</text>
+</svg>
