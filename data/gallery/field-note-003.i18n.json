@@ -1,14 +1,14 @@
-{
+﻿{
   "id": "gal-003",
   "species_slug": "dorcus-titanus",
   "title": {
-    "ja": "朽木上のタイタンオオクワガタ",
-    "en": "Titan stag beetle on decayed wood",
-    "zh": "朽木上的泰坦锹形虫",
-    "ko": "썩은 나무 위의 타이탄사슴벌레",
-    "es": "Escarabajo Titán sobre madera en descomposición",
-    "th": "ด้วงคีมไททันบนไม้ผุ",
-    "fr": "Lucane Titan sur bois mort"
+    "ja": "朽木上のオオヒラタクワガタ",
+    "en": "Giant stag beetle on decayed wood",
+    "zh": "朽木上的大扁锹形虫",
+    "ko": "썩은 나무 위의 오오히라타사슴벌레",
+    "es": "Gran escarabajo ciervo sobre madera en descomposición",
+    "th": "ด้วงคีมยักษ์บนไม้ผุ",
+    "fr": "Grand lucane sur bois mort"
   },
   "credit": {
     "name": "@sample_collector",
@@ -25,10 +25,10 @@
     "fr": "Indonésie"
   },
   "caption": {
-    "ja": "力強い顎の印象を伝える展示用イメージです。",
+    "ja": "力強い大あごの印象を伝える展示用イメージです。",
     "en": "A display image highlighting the strong impression of its mandibles.",
     "zh": "用于表现其强劲大颚印象的展示图像。",
-    "ko": "강한 턱의 인상을 전달하는 전시용 이미지입니다.",
+    "ko": "강한 큰턱의 인상을 전달하는 전시용 이미지입니다.",
     "es": "Una imagen de exhibición que resalta la fuerza de sus mandíbulas.",
     "th": "ภาพสำหรับนำเสนอความแข็งแรงของกรามที่โดดเด่น",
     "fr": "Une image de présentation qui met en valeur la puissance de ses mandibules."

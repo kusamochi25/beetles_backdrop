@@ -127,6 +127,17 @@ function writeGeneratedJson(relativePath, value) {
     writeGeneratedText(relativePath, `${JSON.stringify(value, null, 2)}\n`);
 }
 
+function replaceGeneratedText(relativePath, searchValue, replaceValue) {
+    const filePath = path.join(generatedPagesDir, relativePath);
+
+    if (!fs.existsSync(filePath)) {
+        return;
+    }
+
+    const current = fs.readFileSync(filePath, 'utf8');
+    fs.writeFileSync(filePath, current.split(searchValue).join(replaceValue), 'utf8');
+}
+
 function writePublicText(relativePath, value) {
     const filePath = path.join(publicDir, relativePath);
     ensureDirectory(path.dirname(filePath));
@@ -212,6 +223,12 @@ function renderPage(pageData) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${pageData.meta.title.ja}</title>
     <meta name="description" content="${pageData.meta.description.ja}" />
+    <meta property="og:title" content="${pageData.meta.title.ja}" />
+    <meta property="og:description" content="${pageData.meta.description.ja}" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="${pageData.meta.title.ja}" />
+    <meta name="twitter:description" content="${pageData.meta.description.ja}" />
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
@@ -227,6 +244,16 @@ resetGeneratedPages();
 const species = readJsonFiles('data/species').sort((left, right) => left.name_latin.localeCompare(right.name_latin));
 const gallery = readJsonFiles('data/gallery');
 const speciesBySlug = new Map(species.map((item) => [item.slug, item]));
+const homeDescription = localized(
+    '甲虫を中心に、種ごとの特徴や写真記録をまとめた図鑑サイトです。地域差や個体差も含めて、見比べながら楽しめる記録を少しずつ集めていきます。',
+    'An insect catalog centered on beetles, collecting species notes and photo records with room for regional and individual variation.',
+    '这是一个以甲虫为中心的图鉴网站，持续整理各物种的特征与照片记录，也会逐步收录地域差异和个体差异。',
+    '딱정을 중심으로 종별 특징과 사진 기록을 정리해 나가는 도감 사이트입니다. 지역차와 개체차도 함께 비교하며 볼 수 있도록 조금씩 기록을 모아갑니다.',
+    'Es un catálogo de insectos centrado en escarabajos, con fichas y registros fotográficos que también recogen variaciones regionales e individuales.',
+    'นี่คือเว็บไซต์สารานุกรมแมลงที่เน้นด้วงเป็นหลัก รวบรวมลักษณะของแต่ละชนิดและบันทึกภาพถ่าย รวมถึงความแตกต่างตามถิ่นอาศัยและความแตกต่างของแต่ละตัวด้วย',
+    'Il s’agit d’un catalogue d’insectes centré sur les coléoptères, réunissant des notes d’identification et des archives photo, avec les variations régionales et individuelles.',
+);
+const legacyHomeDescriptionJa = 'JSON データをもとにビルド時生成する静的な昆虫図鑑サイトの最小構成です。';
 const featuredSpecies = [...species]
     .sort((left, right) => {
         const leftUpdatedAt = left.updated_at ?? '1970-01-01';
@@ -312,6 +339,8 @@ writeGeneratedText(
         })),
     }),
 );
+
+replaceGeneratedText('index.html', legacyHomeDescriptionJa, homeDescription.ja);
 
 writeGeneratedText(
     path.join('search', 'index.html'),

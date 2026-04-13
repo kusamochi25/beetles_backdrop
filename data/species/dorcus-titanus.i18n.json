@@ -1,16 +1,16 @@
-{
+﻿{
   "id": "sp-003",
   "updated_at": "2026-04-08",
   "slug": "dorcus-titanus",
   "name_latin": "Dorcus titanus",
   "name": {
-    "ja": "タイタンオオクワガタ",
-    "en": "Titan stag beetle",
-    "zh": "泰坦锹形虫",
-    "ko": "타이탄사슴벌레",
-    "es": "Escarabajo ciervo Titán",
-    "th": "ด้วงคีมไททัน",
-    "fr": "Lucane Titan"
+    "ja": "オオヒラタクワガタ",
+    "en": "Giant stag beetle",
+    "zh": "大扁锹形虫",
+    "ko": "오오히라타사슴벌레",
+    "es": "Gran escarabajo ciervo",
+    "th": "ด้วงคีมยักษ์",
+    "fr": "Grand lucane"
   },
   "genus": "Dorcus",
   "family_group": "kuwagata",
@@ -21,25 +21,25 @@
     "ko": "동남아시아 / 동아시아",
     "es": "Sudeste asiático / Asia oriental",
     "th": "เอเชียตะวันออกเฉียงใต้ / เอเชียตะวันออก",
-    "fr": "Asie du Sud-Est / Asie de l’Est"
+    "fr": "Asie du Sud-Est / Asie de l'Est"
   },
   "aliases": {
-    "ja": ["タイタン", "タイタンオオクワ"],
-    "en": ["Titan stag beetle"],
-    "zh": ["泰坦大锹"],
-    "ko": ["타이탄사슴벌레"],
-    "es": ["Escarabajo Titán"],
-    "th": ["ด้วงคีมไททัน"],
-    "fr": ["Lucane Titan"]
+    "ja": ["オオヒラタクワガタ", "オオヒラタ"],
+    "en": ["Giant stag beetle", "Dorcus titanus"],
+    "zh": ["大扁锹形虫"],
+    "ko": ["오오히라타사슴벌레"],
+    "es": ["Gran escarabajo ciervo"],
+    "th": ["ด้วงคีมยักษ์"],
+    "fr": ["Grand lucane"]
   },
   "description": {
-    "ja": "大型のクワガタムシとして人気の高いグループです。クワガタ一覧と検索挙動の確認に使いやすいよう、分かりやすい名前で構成したサンプルです。",
-    "en": "A popular large stag beetle used here as a clear sample for list browsing and search behavior within the stag beetle group.",
-    "zh": "这是一种很受欢迎的大型锹形虫，在这里作为便于测试列表浏览与搜索行为的清晰样本。",
-    "ko": "대형 사슴벌레로 인기가 높은 종으로, 목록 탐색과 검색 동작 확인용 샘플로 쓰기 좋습니다.",
-    "es": "Es un gran escarabajo ciervo muy popular, usado aquí como muestra clara para probar listados y comportamiento de búsqueda.",
-    "th": "เป็นด้วงคีมขนาดใหญ่ที่ได้รับความนิยมสูง ใช้เป็นตัวอย่างที่ดูเข้าใจง่ายสำหรับการทดสอบรายการและการค้นหา",
-    "fr": "Grand lucane très apprécié, utilisé ici comme échantillon clair pour tester les listes et le comportement de recherche."
+    "ja": "大型のクワガタムシとして知られる代表的な種です。一覧や検索の挙動確認にも使いやすいよう、分かりやすいサンプルとして掲載しています。",
+    "en": "A representative large stag beetle species, included here as a clear sample for browsing lists and checking search behavior.",
+    "zh": "这是一种具有代表性的大型锹形虫，也作为便于确认列表与搜索行为的示例收录于图鉴中。",
+    "ko": "대형 사슴벌레를 대표하는 종으로, 목록과 검색 동작을 확인하기 쉬운 샘플로 수록했습니다.",
+    "es": "Es una especie representativa de gran escarabajo ciervo, incluida aquí como muestra clara para comprobar listados y búsquedas.",
+    "th": "เป็นชนิดตัวแทนของด้วงคีมขนาดใหญ่ และใช้เป็นตัวอย่างที่เข้าใจง่ายสำหรับตรวจสอบการแสดงผลรายการและการค้นหา",
+    "fr": "Il s'agit d'une grande espèce représentative de lucane, incluse ici comme exemple clair pour vérifier les listes et la recherche."
   },
   "images": {
     "thumb": "/images/species/dorcus-titanus/thumb.svg",
