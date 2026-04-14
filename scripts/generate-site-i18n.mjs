@@ -257,7 +257,6 @@ const homeDescription = localized(
     'นี่คือเว็บไซต์สารานุกรมแมลงที่เน้นด้วงเป็นหลัก รวบรวมลักษณะของแต่ละชนิดและบันทึกภาพถ่าย รวมถึงความแตกต่างตามถิ่นอาศัยและความแตกต่างของแต่ละตัวด้วย',
     'Il s’agit d’un catalogue d’insectes centré sur les coléoptères, réunissant des notes d’identification et des archives photo, avec les variations régionales et individuelles.',
 );
-const legacyHomeDescriptionJa = 'JSON データをもとにビルド時生成する静的な昆虫図鑑サイトの最小構成です。';
 const featuredSpecies = [...species]
     .sort((left, right) => {
         const leftUpdatedAt = left.updated_at ?? '1970-01-01';
@@ -316,7 +315,7 @@ writeGeneratedText(
     renderPage({
         kind: 'home',
         meta: {
-            title: localized('昆虫図鑑ベータ', 'Insect Atlas Beta', '昆虫图鉴测试版', '곤충 도감 베타', 'Atlas de Insectos Beta', 'สารานุกรมแมลง เบตา', 'Atlas des Insectes Bêta'),
+            title: localized('昆虫図録 - ベータ版', 'Insect Catalog - Beta', '昆虫图录 - 测试版', '곤충 도록 - 베타판', 'Catálogo de Insectos - Beta', 'สารบบแมลง - รุ่นเบตา', 'Catalogue d’Insectes - Bêta'),
             description: homeDescription,
         },
         stats: {
@@ -336,14 +335,12 @@ writeGeneratedText(
     }),
 );
 
-replaceGeneratedText('index.html', legacyHomeDescriptionJa, homeDescription.ja);
-
 writeGeneratedText(
     path.join('search', 'index.html'),
     renderPage({
         kind: 'search',
         meta: {
-            title: localized('検索 | 昆虫図鑑ベータ', 'Search | Insect Atlas Beta', '搜索 | 昆虫图鉴测试版', '검색 | 곤충 도감 베타', 'Buscar | Atlas de Insectos Beta', 'ค้นหา | สารานุกรมแมลง เบตา', 'Recherche | Atlas des Insectes Bêta'),
+            title: localized('検索 | 昆虫図録 - ベータ版', 'Search | Insect Catalog - Beta', '搜索 | 昆虫图录 - 测试版', '검색 | 곤충 도록 - 베타판', 'Buscar | Catálogo de Insectos - Beta', 'ค้นหา | สารบบแมลง - รุ่นเบตา', 'Recherche | Catalogue d’Insectes - Bêta'),
             description: localized(
                 '学名、和名、各言語名、属名、別名からフロントエンドのみで検索できます。',
                 'Search scientific names, localized names, genus names, and aliases on the frontend only.',
@@ -362,7 +359,7 @@ writeGeneratedText(
     renderPage({
         kind: 'gallery',
         meta: {
-            title: localized('みんなの写真集 | 昆虫図鑑ベータ', 'Photo Gallery | Insect Atlas Beta', '大家的照片集 | 昆虫图鉴测试版', '사진집 | 곤충 도감 베타', 'Galería | Atlas de Insectos Beta', 'แกลเลอรีภาพ | สารานุกรมแมลง เบตา', 'Galerie photo | Atlas des Insectes Bêta'),
+            title: localized('みんなで作る写真集 | 昆虫図録 - ベータ版', 'Photo Album | Insect Catalog - Beta', '大家一起制作的照片集 | 昆虫图录 - 测试版', '함께 만드는 사진집 | 곤충 도록 - 베타판', 'Álbum de fotos | Catálogo de Insectos - Beta', 'สมุดภาพที่ทุกคนช่วยกันสร้าง | สารบบแมลง - รุ่นเบตา', 'Album photo | Catalogue d’Insectes - Bêta'),
             description: localized(
                 '公開用画像をサイズ別に持つギャラリーの最小サンプルです。',
                 'A minimal gallery sample with public image variants.',
@@ -563,13 +560,13 @@ for (const infoPage of infoPages) {
             kind: 'info',
             meta: {
                 title: localized(
-                    `${infoPage.title.ja} | 昆虫図鑑ベータ`,
-                    `${infoPage.title.en} | Insect Atlas Beta`,
-                    `${infoPage.title.zh} | 昆虫图鉴测试版`,
-                    `${infoPage.title.ko} | 곤충 도감 베타`,
-                    `${infoPage.title.es} | Atlas de Insectos Beta`,
-                    `${infoPage.title.th} | สารานุกรมแมลง เบตา`,
-                    `${infoPage.title.fr} | Atlas des Insectes Bêta`,
+                    `${infoPage.title.ja} | 昆虫図録 - ベータ版`,
+                    `${infoPage.title.en} | Insect Catalog - Beta`,
+                    `${infoPage.title.zh} | 昆虫图录 - 测试版`,
+                    `${infoPage.title.ko} | 곤충 도록 - 베타판`,
+                    `${infoPage.title.es} | Catálogo de Insectos - Beta`,
+                    `${infoPage.title.th} | สารบบแมลง - รุ่นเบตา`,
+                    `${infoPage.title.fr} | Catalogue d’Insectes - Bêta`,
                 ),
                 description: infoPage.body?.[0] ?? infoPage.lead,
             },
@@ -589,13 +586,13 @@ for (const group of familyGroups) {
             kind: 'group',
             meta: {
                 title: localized(
-                    `${group.label.ja}一覧 | 昆虫図鑑ベータ`,
-                    `${group.label.en} | Insect Atlas Beta`,
-                    `${group.label.zh} | 昆虫图鉴测试版`,
-                    `${group.label.ko} | 곤충 도감 베타`,
-                    `${group.label.es} | Atlas de Insectos Beta`,
-                    `${group.label.th} | สารานุกรมแมลง เบตา`,
-                    `${group.label.fr} | Atlas des Insectes Bêta`,
+                    `${group.label.ja}一覧 | 昆虫図録 - ベータ版`,
+                    `${group.label.en} | Insect Catalog - Beta`,
+                    `${group.label.zh} | 昆虫图录 - 测试版`,
+                    `${group.label.ko} | 곤충 도록 - 베타판`,
+                    `${group.label.es} | Catálogo de Insectos - Beta`,
+                    `${group.label.th} | สารบบแมลง - รุ่นเบตา`,
+                    `${group.label.fr} | Catalogue d’Insectes - Bêta`,
                 ),
                 description: group.description,
             },
@@ -616,13 +613,13 @@ for (const genus of genusList) {
             kind: 'genus',
             meta: {
                 title: localized(
-                    `${genus.name} 属 | 昆虫図鑑ベータ`,
-                    `${genus.name} genus | Insect Atlas Beta`,
-                    `${genus.name} 属 | 昆虫图鉴测试版`,
-                    `${genus.name} 속 | 곤충 도감 베타`,
-                    `Género ${genus.name} | Atlas de Insectos Beta`,
-                    `${genus.name} | สารานุกรมแมลง เบตา`,
-                    `Genre ${genus.name} | Atlas des Insectes Bêta`,
+                    `${genus.name} 属 | 昆虫図録 - ベータ版`,
+                    `${genus.name} genus | Insect Catalog - Beta`,
+                    `${genus.name} 属 | 昆虫图录 - 测试版`,
+                    `${genus.name} 속 | 곤충 도록 - 베타판`,
+                    `Género ${genus.name} | Catálogo de Insectos - Beta`,
+                    `${genus.name} | สารบบแมลง - รุ่นเบตา`,
+                    `Genre ${genus.name} | Catalogue d’Insectes - Bêta`,
                 ),
                 description: localized(
                     `${genus.name} 属に属する種の一覧ページです。`,
@@ -667,13 +664,13 @@ for (const item of species) {
             kind: 'species',
             meta: {
                 title: localized(
-                    `${item.name.ja} | 昆虫図鑑ベータ`,
-                    `${item.name.en} | Insect Atlas Beta`,
-                    `${item.name.zh} | 昆虫图鉴测试版`,
-                    `${item.name.ko} | 곤충 도감 베타`,
-                    `${item.name.es} | Atlas de Insectos Beta`,
-                    `${item.name.th} | สารานุกรมแมลง เบตา`,
-                    `${item.name.fr} | Atlas des Insectes Bêta`,
+                    `${item.name.ja} | 昆虫図録 - ベータ版`,
+                    `${item.name.en} | Insect Catalog - Beta`,
+                    `${item.name.zh} | 昆虫图录 - 测试版`,
+                    `${item.name.ko} | 곤충 도록 - 베타판`,
+                    `${item.name.es} | Catálogo de Insectos - Beta`,
+                    `${item.name.th} | สารบบแมลง - รุ่นเบตา`,
+                    `${item.name.fr} | Catalogue d’Insectes - Bêta`,
                 ),
                 description: item.description,
             },

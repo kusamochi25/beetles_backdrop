@@ -183,7 +183,7 @@ writeGeneratedText(
         kind: 'home',
         meta: {
             title: '昆虫図鑑ベータ',
-            description: 'JSON データをもとにビルド時生成する静的な昆虫図鑑サイトの最小構成です。',
+            description: '甲虫を中心に、種ごとの特徴や写真記録をまとめた図鑑サイトです。地域差や個体差も含めて、見比べながら楽しめる記録を少しずつ集めていきます。',
         },
         stats: {
             speciesCount: species.length,
