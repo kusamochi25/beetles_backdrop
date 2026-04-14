@@ -317,15 +317,7 @@ writeGeneratedText(
         kind: 'home',
         meta: {
             title: localized('昆虫図鑑ベータ', 'Insect Atlas Beta', '昆虫图鉴测试版', '곤충 도감 베타', 'Atlas de Insectos Beta', 'สารานุกรมแมลง เบตา', 'Atlas des Insectes Bêta'),
-            description: localized(
-                'JSON データをもとにビルド時生成する静的な昆虫図鑑サイトの最小構成です。',
-                'A minimal static insect atlas generated from JSON at build time.',
-                '基于 JSON 在构建时生成的静态昆虫图鉴最小结构。',
-                'JSON 기반으로 빌드 시 생성되는 정적 곤충 도감의 최소 구성입니다.',
-                'Una estructura mínima de atlas de insectos estático generado desde JSON.',
-                'โครงสร้างขั้นต่ำของสารานุกรมแมลงแบบสแตติกที่สร้างจาก JSON ตอน build',
-                'Une structure minimale d’atlas d’insectes statique généré depuis JSON.',
-            ),
+            description: homeDescription,
         },
         stats: {
             speciesCount: species.length,
