@@ -15,13 +15,13 @@
   "genus": "Odontolabis",
   "family_group": "kuwagata",
   "region": {
-    "ja": "",
-    "en": "",
-    "zh": "",
-    "ko": "",
-    "es": "",
-    "th": "",
-    "fr": ""
+    "ja": "マレーシア / ボルネオ島 / スマトラ島 / フィリピン",
+    "en": "Malaysia / Borneo / Sumatra / Philippines",
+    "zh": "马来西亚 / 婆罗洲 / 苏门答腊岛 / 菲律宾",
+    "ko": "말레이시아 / 보르네오섬 / 수마트라섬 / 필리핀",
+    "es": "Malasia / Borneo / Sumatra / Filipinas",
+    "th": "มาเลเซีย / เกาะบอร์เนียว / เกาะสุมาตรา / ฟิลิปปินส์",
+    "fr": "Malaisie / Bornéo / Sumatra / Philippines"
   },
   "aliases": {
     "ja": [

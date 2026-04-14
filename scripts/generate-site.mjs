@@ -17,8 +17,8 @@ const familyGroups = [
         description: '大あごが目立つ仲間をまとめた一覧です。',
     },
     {
-        slug: 'kanabun',
-        label: 'カナブン',
+        slug: 'koganemushi',
+        label: 'コガネムシ',
         description: '光沢や色彩が特徴的な仲間をまとめた一覧です。',
     },
     {
@@ -69,7 +69,7 @@ function sanitizeColor(seed) {
     const palette = {
         kabutomushi: ['#4b2e05', '#8f5b11', '#f6d67f'],
         kuwagata: ['#2d3136', '#5f6b73', '#d3dce2'],
-        kanabun: ['#0f5132', '#1f9d73', '#c9f4da'],
+        koganemushi: ['#0f5132', '#1f9d73', '#c9f4da'],
         others: ['#1f3a5f', '#4f86c6', '#d6ecff'],
         gallery: ['#6a3f13', '#b8752c', '#f8dcb0'],
     };

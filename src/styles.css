@@ -560,6 +560,67 @@ img {
     color: var(--muted);
 }
 
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 12px;
+}
+
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-top: 14px;
+}
+
+.hero-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.hero-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.info-copy {
+    display: grid;
+    gap: 16px;
+    max-width: 860px;
+}
+
+.lead--preline {
+    white-space: pre-line;
+}
+
+.faq-list {
+    display: grid;
+    gap: 28px;
+    max-width: 900px;
+}
+
+.faq-item {
+    display: grid;
+    gap: 10px;
+}
+
+.faq-question {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
 .lightbox {
     position: fixed;
     inset: 0;

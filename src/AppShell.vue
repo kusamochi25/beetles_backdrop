@@ -34,7 +34,7 @@ const props = defineProps<{ pageData: PageData }>();
 const groupLabelMap: Record<string, string> = {
     kabutomushi: 'カブトムシ',
     kuwagata: 'クワガタムシ',
-    kanabun: 'カナブン',
+    koganemushi: 'コガネムシ',
     others: 'その他',
 };
 

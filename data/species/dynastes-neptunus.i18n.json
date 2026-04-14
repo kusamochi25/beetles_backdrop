@@ -1,4 +1,4 @@
-{
+﻿{
   "id": "sp-002",
   "updated_at": "2026-04-09",
   "slug": "dynastes-neptunus",
@@ -24,22 +24,22 @@
     "fr": "Colombie / Pérou / Équateur"
   },
   "aliases": {
-    "ja": ["ネプチューン", "ネプチューンカブト"],
+    "ja": ["ネプチューンオオカブト", "ネプチューン"],
     "en": ["Neptune beetle"],
-    "zh": ["海神兜虫"],
+    "zh": ["海神大兜虫"],
     "ko": ["넵튠장수풍뎅이"],
     "es": ["Escarabajo Neptuno"],
     "th": ["ด้วงเนปจูน"],
     "fr": ["Scarabée Neptune"]
   },
   "description": {
-    "ja": "ヘラクレスに近い属の代表種で、長い胸角と頭角のバランスが美しい大型カブトムシです。属ページや前後リンクの動作確認に向いています。",
-    "en": "A large Dynastes species closely related to the Hercules beetle, with an elegant balance between the thoracic and head horns. It works well for testing genus navigation.",
-    "zh": "这是与赫拉克勒斯兜虫同属的代表种之一，胸角与头角的比例十分优美，也适合用于测试属页面与前后导航。",
-    "ko": "헤라클레스와 가까운 같은 속의 대표종으로, 가슴뿔과 머리뿔의 균형이 아름다운 대형 장수풍뎅이입니다. 속 페이지 테스트에 잘 맞습니다.",
-    "es": "Es una gran especie del mismo género que el Hércules, con un equilibrio elegante entre el cuerno torácico y el cefálico. Resulta útil para probar la navegación por género.",
-    "th": "เป็นด้วงกว่างขนาดใหญ่ในสกุลเดียวกับเฮอร์คิวลิส มีสัดส่วนเขาอกและเขาหัวที่สวยงาม เหมาะสำหรับทดสอบหน้า genus",
-    "fr": "Grande espèce du même genre que le scarabée Hercule, avec un bel équilibre entre les cornes thoracique et céphalique. Elle convient bien aux tests de navigation par genre."
+    "ja": "ヘラクレスオオカブトに次ぐ大きさを持つ種であり、Dynastes属といえばヘラクレスオオカブトと並んで挙げられる。ヘラクレスとは違い、胸角と頭角の間に小さな角が2つ生える。アンデス山脈の高地に生息するため暑さに弱い。",
+    "en": "It is a species that ranks next to the Hercules beetle in size, and when people speak of the genus Dynastes it is often mentioned alongside Hercules. Unlike Hercules, it has two small horns between the thoracic horn and the cephalic horn. Because it lives in the high elevations of the Andes, it is weak against heat.",
+    "zh": "它是体型仅次于赫拉克勒斯大兜虫的种类，说到 Dynastes 属时，常常会与赫拉克勒斯并列提及。与赫拉克勒斯不同的是，在胸角与头角之间还会长出两枚小角。由于栖息于安第斯山脉高地，因此不耐高温。",
+    "ko": "헤라클레스장수풍뎅이에 이어 큰 체구를 지닌 종으로, Dynastes속을 말할 때 헤라클레스와 함께 자주 언급됩니다. 헤라클레스와 달리 가슴뿔과 머리뿔 사이에 작은 뿔 두 개가 더 돋아납니다. 안데스 산맥의 고지대에 서식하기 때문에 더위에 약합니다.",
+    "es": "Es una especie de tamaño inferior solo al escarabajo Hércules y, al hablar del género Dynastes, suele mencionarse junto a él. A diferencia del Hércules, presenta dos pequeños cuernos entre el cuerno torácico y el cefálico. Como habita en las zonas altas de los Andes, es sensible al calor.",
+    "th": "เป็นชนิดที่มีขนาดรองจากด้วงเฮอร์คิวลิส และเมื่อกล่าวถึงสกุล Dynastes ก็มักถูกยกขึ้นมาควบคู่กับเฮอร์คิวลิส แตกต่างจากเฮอร์คิวลิสตรงที่มีเขาเล็กอีก 2 อันอยู่ระหว่างเขาอกกับเขาหัว เนื่องจากอาศัยอยู่บนที่สูงของเทือกเขาแอนดีส จึงไม่ทนต่ออากาศร้อน",
+    "fr": "C’est une espèce dont la taille vient juste après celle du scarabée Hercule, et lorsqu’on évoque le genre Dynastes, elle est souvent citée à ses côtés. Contrairement à l’Hercule, elle possède deux petites cornes entre la corne thoracique et la corne céphalique. Comme elle vit dans les hautes altitudes de la cordillère des Andes, elle supporte mal la chaleur."
   },
   "images": {
     "thumb": "/images/species/dynastes-neptunus/thumb.svg",

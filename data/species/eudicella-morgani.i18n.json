@@ -1,0 +1,66 @@
+{
+  "id": "sp-008",
+  "updated_at": "2026-04-14",
+  "slug": "eudicella-morgani",
+  "name_latin": "Eudicella morgani",
+  "name": {
+    "ja": "モルガンサスマタカナブン",
+    "en": "Eudicella morgani",
+    "zh": "摩根叉角花金龟",
+    "ko": "모건사슴꽃무지",
+    "es": "Eudicella morgani",
+    "th": "Eudicella morgani",
+    "fr": "Eudicella morgani"
+  },
+  "genus": "Eudicella",
+  "family_group": "koganemushi",
+  "region": {
+    "ja": "カメルーン",
+    "en": "Cameroon",
+    "zh": "喀麦隆",
+    "ko": "카메룬",
+    "es": "Cameroon",
+    "th": "Cameroon",
+    "fr": "Cameroon"
+  },
+  "aliases": {
+    "ja": ["モルガンサスマタカナブン", "シュルツサスマタカナブン"],
+    "en": ["Eudicella morgani"],
+    "zh": ["摩根叉角花金龟"],
+    "ko": ["모건사슴꽃무지"],
+    "es": ["Eudicella morgani"],
+    "th": ["Eudicella morgani"],
+    "fr": ["Eudicella morgani"]
+  },
+  "description": {
+    "ja": "成虫は日中活動する。上翅の模様は変異が大きいことで知られ、いくつかの地域変異型が亜種として扱われてきた。Eudicella gralli や Eudicella daphnis との形態差が小さく、属内の分類関係は現在も議論が続いている。",
+    "en": "Adults are active during the day. The pattern on the elytra is known to vary greatly, and several regional forms have been treated as subspecies. Morphological differences from Eudicella gralli and Eudicella daphnis are small, and the classification within the genus is still under discussion.",
+    "zh": "成虫在白天活动。其鞘翅斑纹以变异较大而闻名，一些地域变异型曾被作为亚种处理。它与 Eudicella gralli 及 Eudicella daphnis 的形态差异较小，属内的分类关系至今仍在讨论之中。",
+    "ko": "성충은 주행성입니다. 딱지날개의 무늬 변이가 큰 것으로 알려져 있으며, 몇몇 지역 변이형은 아종으로 취급되어 왔습니다. Eudicella gralli 및 Eudicella daphnis 와의 형태 차이가 작아, 속 내 분류 관계는 지금도 논의가 이어지고 있습니다.",
+    "es": "Los adultos son activos durante el día. El patrón de los élitros es conocido por su gran variación, y varias formas regionales han sido tratadas como subespecies. Las diferencias morfológicas con Eudicella gralli y Eudicella daphnis son pequeñas, y la clasificación dentro del género sigue en debate.",
+    "th": "ตัวเต็มวัยออกหากินในเวลากลางวัน ลวดลายบนปีกแข็งเป็นที่รู้กันว่ามีความแปรผันสูง และรูปแบบตามภูมิภาคบางแบบเคยถูกจัดเป็นชนิดย่อย ความแตกต่างทางสัณฐานวิทยาจาก Eudicella gralli และ Eudicella daphnis มีน้อย ทำให้ความสัมพันธ์ทางอนุกรมวิธานภายในสกุลนี้ยังคงเป็นประเด็นถกเถียงอยู่ในปัจจุบัน",
+    "fr": "Les adultes sont actifs pendant la journée. Le motif des élytres est connu pour sa grande variabilité, et plusieurs formes régionales ont été traitées comme des sous-espèces. Les différences morphologiques avec Eudicella gralli et Eudicella daphnis sont faibles, et les relations taxonomiques au sein du genre font encore l’objet de débats."
+  },
+  "references": [
+    {
+      "citation": "De Palma, M., Takano, H., Léonard, P. & Bouyer, T. 2021. Taxonomic revision of the Eudicella White, 1839 complex, with description of three new subgenera (Scarabaeidae, Cetoniinae, Goliathini). Entomologia Africana 26(2): 11-24.",
+      "url": "https://infoscience.epfl.ch/handle/20.500.14299/183007"
+    }
+  ],
+  "images": [
+    {
+      "thumb": "/images/species/eudicella-morgani/01_thumb.webp",
+      "medium": "/images/species/eudicella-morgani/01_medium.webp",
+      "large": "/images/species/eudicella-morgani/01_large.webp",
+      "caption": {
+        "ja": "標本写真 1",
+        "en": "specimen photo 1",
+        "zh": "标本照片 1",
+        "ko": "표본 사진 1",
+        "es": "specimen photo 1",
+        "th": "specimen photo 1",
+        "fr": "photo de spécimen 1"
+      }
+    }
+  ]
+}

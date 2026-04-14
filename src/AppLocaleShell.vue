@@ -92,6 +92,10 @@ const currentGroup = computed(() => (page.value.group as GroupSummary | undefine
 const currentGenus = computed(() => (page.value.genus as { name: string; count: number } | undefined));
 const previousSpecies = computed(() => (page.value.previous as NeighborLink | null | undefined));
 const nextSpecies = computed(() => (page.value.next as NeighborLink | null | undefined));
+const currentInfoTitle = computed(() => (page.value.title as LocalizedText | undefined));
+const currentInfoLead = computed(() => (page.value.lead as LocalizedText | undefined));
+const currentInfoBody = computed(() => ((page.value.body as LocalizedText[] | undefined) ?? []));
+const currentFaqItems = computed(() => ((page.value.faqItems as { question: LocalizedText; answer: LocalizedText[] }[] | undefined) ?? []));
 const groupGenusOptions = computed<GalleryFilterChip[]>(() => {
     const genusSet = new Set(speciesList.value.map((item) => item.genus).filter(Boolean));
 
@@ -113,7 +117,7 @@ const visibleSpecies = computed(() => filteredGroupSpecies.value.slice(0, visibl
 const groupTabs = computed(() => homeGroups.value.length > 0 ? homeGroups.value : [
     { slug: 'kabutomushi', label: groupLabels.kabutomushi, description: groupLabels.kabutomushi, count: 0 },
     { slug: 'kuwagata', label: groupLabels.kuwagata, description: groupLabels.kuwagata, count: 0 },
-    { slug: 'kanabun', label: groupLabels.kanabun, description: groupLabels.kanabun, count: 0 },
+    { slug: 'koganemushi', label: groupLabels.koganemushi, description: groupLabels.koganemushi, count: 0 },
     { slug: 'others', label: groupLabels.others, description: groupLabels.others, count: 0 },
 ]);
 const aboutContent: Record<Locale, Record<string, string>> = {
@@ -205,7 +209,7 @@ const galleryPrimaryFilters = computed<GalleryPrimaryFilter[]>(() => {
     const orderedFilters = [
         { key: 'group:kabutomushi', label: groupLabel('kabutomushi') },
         { key: 'group:kuwagata', label: groupLabel('kuwagata') },
-        { key: 'group:kanabun', label: groupLabel('kanabun') },
+        { key: 'group:koganemushi', label: groupLabel('koganemushi') },
         { key: 'group:others', label: groupLabel('others') },
         { key: 'tag:wild', label: galleryTagLabel('wild') },
         { key: 'tag:bred', label: galleryTagLabel('bred') },
@@ -607,6 +611,11 @@ watch(currentGroup, () => {
                         <a class="button button--primary" href="/groups/kabutomushi/">{{ t('viewByGroup') }}</a>
                         <a class="button" href="/search/">{{ t('searchAction') }}</a>
                     </div>
+                    <div class="hero-links">
+                        <a href="/privacy/">{{ t('footerPrivacy') }}</a>
+                        <a href="/contact/">{{ t('footerContact') }}</a>
+                        <a href="/faq/">{{ t('footerFaq') }}</a>
+                    </div>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-card">
@@ -645,26 +654,6 @@ watch(currentGroup, () => {
             <section v-if="page.kind === 'home'" class="section">
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">{{ t('featuredEyebrow') }}</p>
-                        <h2>{{ t('featuredTitle') }}</h2>
-                    </div>
-                </div>
-                <div class="card-grid">
-                    <SpeciesCardI18n
-                        v-for="item in homeFeatured"
-                        :key="item.slug"
-                        :item="item"
-                        :taxonomy-label="taxonomyLabel(item.family_group, item.genus)"
-                        :current-language="currentLanguage"
-                        :detail-label="t('detailLink')"
-                        body-mode="description"
-                    />
-                </div>
-            </section>
-
-            <section v-if="page.kind === 'home'" class="section">
-                <div class="section-heading">
-                    <div>
                         <p class="eyebrow">{{ t('photosEyebrow') }}</p>
                         <h2>{{ t('photosTitle') }}</h2>
                     </div>
@@ -681,6 +670,26 @@ watch(currentGroup, () => {
                             <p>{{ localizedText(entry.species_name) }} / {{ localizedText(entry.location) }}</p>
                         </div>
                     </article>
+                </div>
+            </section>
+
+            <section v-if="page.kind === 'home'" class="section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">{{ t('featuredEyebrow') }}</p>
+                        <h2>{{ t('featuredTitle') }}</h2>
+                    </div>
+                </div>
+                <div class="card-grid">
+                    <SpeciesCardI18n
+                        v-for="item in homeFeatured"
+                        :key="item.slug"
+                        :item="item"
+                        :taxonomy-label="taxonomyLabel(item.family_group, item.genus)"
+                        :current-language="currentLanguage"
+                        :detail-label="t('detailLink')"
+                        body-mode="description"
+                    />
                 </div>
             </section>
 
@@ -916,10 +925,42 @@ watch(currentGroup, () => {
                     </article>
                 </div>
             </section>
+
+            <section v-if="page.kind === 'info'" class="section">
+                <h1>{{ localizedText(currentInfoTitle) }}</h1>
+                <p v-if="currentInfoLead" class="lead">{{ localizedText(currentInfoLead) }}</p>
+                <div v-if="currentFaqItems.length > 0" class="faq-list">
+                    <article v-for="(item, index) in currentFaqItems" :key="index" class="faq-item">
+                        <h2 class="faq-question">Q{{ index + 1 }}. {{ localizedText(item.question) }}</h2>
+                        <p
+                            v-for="(answerParagraph, answerIndex) in item.answer"
+                            :key="`${index}-${answerIndex}`"
+                            class="lead"
+                        >
+                            {{ localizedText(answerParagraph) }}
+                        </p>
+                    </article>
+                </div>
+                <div v-if="currentInfoBody.length > 0" class="info-copy">
+                    <p
+                        v-for="(paragraph, index) in currentInfoBody"
+                        :key="index"
+                        class="lead"
+                        :class="{ 'lead--preline': localizedText(paragraph).includes('\n') }"
+                    >
+                        {{ localizedText(paragraph) }}
+                    </p>
+                </div>
+            </section>
         </main>
 
         <footer class="site-footer">
             <p>{{ t('footer') }}</p>
+            <nav class="footer-links" aria-label="Footer links">
+                <a href="/privacy/">{{ t('footerPrivacy') }}</a>
+                <a href="/contact/">{{ t('footerContact') }}</a>
+                <a href="/faq/">{{ t('footerFaq') }}</a>
+            </nav>
         </footer>
 
         <LightboxModalI18n :image="lightboxImage" :close-label="t('close')" @close="closeLightbox" />

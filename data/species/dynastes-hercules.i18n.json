@@ -33,13 +33,13 @@
     "fr": ["Scarabée Hercule"]
   },
   "description": {
-    "ja": "世界最大級のカブトムシとして知られる大型種です。長い角と強い存在感を持ち、図鑑の代表的な掲載種として扱いやすいサンプルです。",
-    "en": "A very large rhinoceros beetle known as one of the biggest in the world. Its long horns and strong silhouette make it a reliable flagship sample for the atlas.",
-    "zh": "这是一种以世界最大级兜虫之一而闻名的大型种，拥有修长的角与强烈的存在感，非常适合作为图鉴代表样本。",
-    "ko": "세계 최대급 장수풍뎅이로 알려진 대형종입니다. 긴 뿔과 강한 존재감 덕분에 도감 대표 샘플로 쓰기 좋습니다.",
-    "es": "Es una especie grande conocida como uno de los escarabajos rinoceronte más grandes del mundo. Sus largos cuernos y su silueta poderosa la convierten en una gran especie emblemática.",
-    "th": "เป็นด้วงกว่างขนาดใหญ่ที่ขึ้นชื่อว่าใหญ่ที่สุดชนิดหนึ่งของโลก เขายาวและรูปร่างโดดเด่นจึงเหมาะเป็นตัวอย่างหลักของสารานุกรมนี้",
-    "fr": "Grande espèce connue comme l’un des plus grands scarabées rhinocéros du monde. Ses longues cornes et sa forte présence en font un excellent échantillon emblématique."
+    "ja": "基準となる原名亜種はグアドループ諸島に生息する。世界最大級の甲虫として知られ、日本では「ヘラクレスオオカブト」の名は昆虫好きでなくとも広く知られている。頭角には柔らかい毛が生えており、何度でも触りたくなる触り心地である。",
+    "en": "The nominotypical subspecies, which serves as the standard form, occurs in the Guadeloupe Islands. It is known as one of the largest beetles in the world, and in Japan the name \"Hercules beetle\" is widely recognized even by people who are not especially interested in insects. The cephalic horn bears soft hair and has a texture that makes you want to touch it again and again.",
+    "zh": "作为标准型的原名亚种分布于瓜德罗普群岛。它被认为是世界最大级的甲虫之一，在日本，“赫拉克勒斯大兜虫”这一名称即使在并非昆虫爱好者的人群中也广为人知。头角上生有柔软的毛，触感让人忍不住想一再触摸。",
+    "ko": "기준이 되는 원명아종은 과들루프 제도에 서식합니다. 세계 최대급의 갑충으로 알려져 있으며, 일본에서는 \"헤라클레스장수풍뎅이\"라는 이름이 곤충 애호가가 아니어도 널리 알려져 있습니다. 머리뿔에는 부드러운 털이 나 있어 자꾸 만져 보고 싶어지는 촉감을 가지고 있습니다.",
+    "es": "La subespecie nominal, que sirve como forma de referencia, habita en las islas de Guadalupe. Es conocida como uno de los escarabajos más grandes del mundo y, en Japón, el nombre \"escarabajo Hércules\" es ampliamente reconocido incluso por personas que no son aficionadas a los insectos. El cuerno cefálico está cubierto de pelos suaves y tiene una textura que invita a tocarlo una y otra vez.",
+    "th": "ชนิดย่อยชื่อเดียวกับชนิดหลักซึ่งถือเป็นแบบมาตรฐาน อาศัยอยู่ในหมู่เกาะกวาเดอลูป มันเป็นที่รู้จักว่าเป็นหนึ่งในแมลงปีกแข็งที่ใหญ่ที่สุดในโลก และในญี่ปุ่นชื่อ \"ด้วงเฮอร์คิวลิส\" ก็เป็นที่รู้จักอย่างกว้างขวางแม้ในหมู่คนที่ไม่ได้ชื่นชอบแมลงโดยเฉพาะ บนเขาส่วนหัวมีขนอ่อนนุ่มขึ้นอยู่ และให้สัมผัสที่ชวนให้อยากแตะซ้ำแล้วซ้ำอีก",
+    "fr": "La sous-espèce nominale, qui constitue la forme de référence, vit dans les îles de la Guadeloupe. Elle est connue comme l’un des plus grands coléoptères du monde et, au Japon, le nom de « scarabée Hercule » est largement connu même des personnes qui ne s’intéressent pas particulièrement aux insectes. La corne céphalique porte un duvet doux, avec un toucher qui donne envie d’y revenir encore et encore."
   },
   "images": {
     "thumb": "/images/species/dynastes-hercules/thumb.svg",

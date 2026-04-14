@@ -18,7 +18,7 @@ const lightboxImage = ref<{ src: string; alt: string } | null>(null);
 const groupLabelMap: Record<string, string> = {
     kabutomushi: 'カブトムシ',
     kuwagata: 'クワガタムシ',
-    kanabun: 'カナブン',
+    koganemushi: 'コガネムシ',
     others: 'その他',
 };
 

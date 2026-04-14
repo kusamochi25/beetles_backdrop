@@ -71,7 +71,7 @@ export type MetaInfo = {
 };
 
 export type PageData = {
-    kind: 'home' | 'group' | 'genus' | 'species' | 'search' | 'gallery';
+    kind: 'home' | 'group' | 'genus' | 'species' | 'search' | 'gallery' | 'info';
     meta: MetaInfo;
     [key: string]: unknown;
 };
