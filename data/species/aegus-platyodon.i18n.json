@@ -1,0 +1,353 @@
+{
+  "id": "sp-009",
+  "updated_at": "2026-04-21",
+  "slug": "aegus-platyodon",
+  "name_latin": "Aegus platyodon",
+  "name": {
+    "ja": "プラティオドンネブト",
+    "en": "Aegus platyodon",
+    "zh": "Aegus platyodon",
+    "ko": "Aegus platyodon",
+    "es": "Aegus platyodon",
+    "th": "Aegus platyodon",
+    "fr": "Aegus platyodon"
+  },
+  "genus": "Aegus",
+  "family_group": "kuwagata",
+  "region": {
+    "ja": "モルッカ諸島 / ラジャアンパット諸島 / ニューギニア / ビスマルク諸島",
+    "en": "Region data pending",
+    "zh": "地区信息整理中",
+    "ko": "분포 정보 정리 중",
+    "es": "Datos de distribución en preparación",
+    "th": "กำลังจัดเตรียมข้อมูลการกระจายพันธุ์",
+    "fr": "Données de répartition en cours de préparation"
+  },
+  "aliases": {
+    "ja": [
+      "プラティオドンネブト",
+      "プラティオドンネブトクワガタ"
+    ],
+    "en": [
+      "Aegus platyodon"
+    ],
+    "zh": [
+      "Aegus platyodon"
+    ],
+    "ko": [
+      "Aegus platyodon"
+    ],
+    "es": [
+      "Aegus platyodon"
+    ],
+    "th": [
+      "Aegus platyodon"
+    ],
+    "fr": [
+      "Aegus platyodon"
+    ]
+  },
+  "description": {
+    "ja": "大あごの内歯が発達し、頭部には星形にも見える突起があることで知られるネブトクワガタの一種である。亜種ごとの分布差が大きく、モルッカ諸島からニューギニア周辺にかけて複数の亜種が整理されている。",
+    "en": "This is an initial entry for Aegus platyodon. The images and scientific name are connected first, and detailed notes and distribution data will be added later.",
+    "zh": "这是 Aegus platyodon 的基础条目。当前先连接图片与学名，详细解说与分布信息将在后续补充。",
+    "ko": "Aegus platyodon의 기본 정보를 정리하기 위한 등록 페이지입니다. 우선 이미지와 학명을 연결해 두었고, 자세한 해설과 분포 정보는 이후에 보강할 예정입니다.",
+    "es": "Esta es una entrada inicial para Aegus platyodon. Primero se han conectado las imágenes y el nombre científico, y más adelante se añadirán notas detalladas y datos de distribución.",
+    "th": "นี่คือหน้าข้อมูลเบื้องต้นของ Aegus platyodon ขณะนี้เชื่อมโยงภาพและชื่อวิทยาศาสตร์ไว้ก่อน และจะเพิ่มเติมคำอธิบายกับข้อมูลการกระจายพันธุ์ภายหลัง",
+    "fr": "Il s'agit d'une fiche provisoire pour Aegus platyodon. Les images et le nom scientifique sont reliés en premier, et des explications détaillées ainsi que les données de répartition seront ajoutées plus tard."
+  },
+  "images": [
+    {
+      "thumb": "/images/subspecies/aegus-platyodon-leopoldi/01_thumb.webp",
+      "medium": "/images/subspecies/aegus-platyodon-leopoldi/01_medium.webp",
+      "large": "/images/subspecies/aegus-platyodon-leopoldi/01_large.webp",
+      "caption": {
+        "ja": "標本写真 1",
+        "en": "specimen photo 1",
+        "zh": "标本照片 1",
+        "ko": "표본 사진 1",
+        "es": "foto del ejemplar 1",
+        "th": "ภาพตัวอย่าง 1",
+        "fr": "photo du spécimen 1"
+      }
+    },
+    {
+      "thumb": "/images/subspecies/aegus-platyodon-leopoldi/02_thumb.webp",
+      "medium": "/images/subspecies/aegus-platyodon-leopoldi/02_medium.webp",
+      "large": "/images/subspecies/aegus-platyodon-leopoldi/02_large.webp",
+      "caption": {
+        "ja": "標本写真 2",
+        "en": "specimen photo 2",
+        "zh": "标本照片 2",
+        "ko": "표본 사진 2",
+        "es": "foto del ejemplar 2",
+        "th": "ภาพตัวอย่าง 2",
+        "fr": "photo du spécimen 2"
+      }
+    }
+  ],
+  "subspecies": [
+    {
+      "slug": "aegus-platyodon-platyodon",
+      "name_latin": "Aegus platyodon platyodon",
+      "name": {
+        "ja": "????",
+        "en": "Aegus platyodon platyodon",
+        "zh": "原名亚种",
+        "ko": "원명아종",
+        "es": "Subespecie nominal",
+        "th": "ชนิดย่อยชื่อเดิม",
+        "fr": "Sous-espèce nominale"
+      },
+      "region": {
+        "ja": "???????????? / ?????? / ????? / ??????? / ????? / ??????",
+        "en": "Moluccas (Halmahera / Mandiole / Ternate / Bacan)",
+        "zh": "摩鹿加群岛（哈马黑拉岛 / 曼迪奥利岛 / 特尔纳特岛 / 巴占岛）",
+        "ko": "몰루카 제도(할마헤라섬 / 만디올리섬 / 테르나테섬 / 바찬섬)",
+        "es": "Molucas (Halmahera / Mandiole / Ternate / Bacan)",
+        "th": "หมู่เกาะโมลุกกะ (ฮัลมาเฮรา / มันดิโอลี / เตร์นาเต / บาจัน)",
+        "fr": "Moluques (Halmahera / Mandiole / Ternate / Bacan)"
+      },
+      "description": {
+        "ja": "Bartolozzi ??????????????????????????????????????????????????????????????????????",
+        "en": "In the checklist by Bartolozzi and colleagues, this is treated as the nominotypical subspecies distributed on Halmahera, Mandiole, Ternate, and Bacan.",
+        "zh": "? Bartolozzi ????????????????????????????????????????????",
+        "ko": "Bartolozzi ?? ???????? ?????, ?????, ?????, ???? ???? ?????? ???? ??.",
+        "es": "En la lista de Bartolozzi y colaboradores, se trata como la subespecie nominal distribuida en Halmahera, Mandiole, Ternate y Bacan.",
+        "th": "?????????????? Bartolozzi ?????? ???????????????????????????????????????????????????????????????? ????????? ????????? ????????",
+        "fr": "Dans la checklist de Bartolozzi et collaborateurs, elle est trait?e comme la sous-esp?ce nominale r?partie ? Halmahera, Mandiole, Ternate et Bacan."
+      },
+      "references": [
+        {
+          "citation": "Bartolozzi, L., Cianferoni, F. & Monte, C. 2011. Checklist of the Lucanidae from the Indo-Australian transition zone. In: Telnov, D. (ed.), Biodiversity, Biogeography and Nature Conservation in Wallacea and New Guinea, Vol. I: 43-80.",
+          "url": "https://www.researchgate.net/publication/258833367_Checklist_of_the_Lucanidae_from_the_Indo-Australian_transition_zone"
+        },
+        {
+          "citation": "水沼哲郎・永井信二 1994. 世界のクワガタムシ大図鑑. むし社, 東京."
+        }
+      ]
+    },
+    {
+      "slug": "aegus-platyodon-leopoldi",
+      "name_latin": "Aegus platyodon leopoldi",
+      "name": {
+        "ja": "?????",
+        "en": "Aegus platyodon leopoldi",
+        "zh": "雷奥波尔迪",
+        "ko": "레오폴디",
+        "es": "Leopoldi",
+        "th": "เลโอโพลดิ",
+        "fr": "Leopoldi"
+      },
+      "region": {
+        "ja": "????????????????? / ??????????????????",
+        "en": "Moluccan Archipelago (Misool Island) / New Guinea (western part)",
+        "zh": "摩鲁加群岛（密索尔岛） / 新几内亚（西部）",
+        "ko": "몰루카 제도(미솔 섬) / 뉴기니아(서부)",
+        "es": "Archipiélago de las Molucas (isla Misool) / Nueva Guinea (parte occidental)",
+        "th": "หมู่เกาะโมลุกกะ (เกาะมิโซล) / นิวกีนี(ตะวันตก)",
+        "fr": "Archipel des Moluques (île Misool) / Nouvelle-Guinée (partie occidentale)"
+      },
+      "images": [
+        {
+          "thumb": "/images/subspecies/aegus-platyodon-leopoldi/01_thumb.webp",
+          "medium": "/images/subspecies/aegus-platyodon-leopoldi/01_medium.webp",
+          "large": "/images/subspecies/aegus-platyodon-leopoldi/01_large.webp"
+        },
+        {
+          "thumb": "/images/subspecies/aegus-platyodon-leopoldi/02_thumb.webp",
+          "medium": "/images/subspecies/aegus-platyodon-leopoldi/02_medium.webp",
+          "large": "/images/subspecies/aegus-platyodon-leopoldi/02_large.webp"
+        }
+      ],
+      "description": {
+        "ja": "Bartolozzi ??????????????????????????????????????????",
+        "en": "Images are registered for this subspecies. In the checklist by Bartolozzi and colleagues, it is treated as the form from Misool Island and western New Guinea.",
+        "zh": "该亚种的图像已登录。在 Bartolozzi 等人的检核名录中，它被整理为分布于密索尔岛与新几内亚西部的亚种。",
+        "ko": "이 아종은 이미지가 등록되어 있습니다. Bartolozzi 등의 체크리스트에서는 미솔 섬과 뉴기니아 서부에서 분포하는 아종으로 정리되어 있습니다.",
+        "es": "Las im?genes de esta subespecie ya est?n registradas. En la lista de Bartolozzi y colaboradores, se trata como la forma de la isla Misool y de Nueva Guinea occidental.",
+        "th": "ภาพของชนิดย่อยนี้ได้ลงทะเบียนแล้ว ในเช็กลิสต์ของ Bartolozzi และคณะ ชนิดย่อยนี้ถูกจัดไว้ว่าพบที่เกาะมิโซลและนิวกีนีตะวันตการตะวันตการตะวันตก.",
+        "fr": "Des images sont d?j? enregistr?es pour cette sous-esp?ce. Dans la checklist de Bartolozzi et collaborateurs, elle est trait?e comme la forme de l??le Misool et de la Nouvelle-Guin?e occidentale."
+      },
+      "references": [
+        {
+          "citation": "Bartolozzi, L., Cianferoni, F. & Monte, C. 2011. Checklist of the Lucanidae from the Indo-Australian transition zone. In: Telnov, D. (ed.), Biodiversity, Biogeography and Nature Conservation in Wallacea and New Guinea, Vol. I: 43-80.",
+          "url": "https://www.researchgate.net/publication/258833367_Checklist_of_the_Lucanidae_from_the_Indo-Australian_transition_zone"
+        },
+        {
+          "citation": "水沼哲郎・永井信二 1994. 世界のクワガタムシ大図鑑. むし社, 東京."
+        }
+      ]
+    },
+    {
+      "slug": "aegus-platyodon-otanii",
+      "name_latin": "Aegus platyodon otanii",
+      "name": {
+        "ja": "????",
+        "en": "Aegus platyodon otanii",
+        "zh": "大谷",
+        "ko": "오타니",
+        "es": "Otanii",
+        "th": "โอตานิ",
+        "fr": "Otanii"
+      },
+      "region": {
+        "ja": "?????????? / ???????",
+        "en": "Moluccan Archipelago (Obi Island / Obilatu Island)",
+        "zh": "摩鹿加群岛（奥比岛 / 奥比拉图岛）",
+        "ko": "몰루카 제도(오비섬 / 오비라투섬)",
+        "es": "Archipiélago de las Molucas (isla Obi / isla Obilatu)",
+        "th": "หมู่เกาะโมลุกกะ (เกาะโอบี / เกาะโอบีลาตู)",
+        "fr": "Archipel des Moluques (île Obi / île Obilatu)"
+      },
+      "description": {
+        "ja": "Bartolozzi ???????????????????????????????????????????????",
+        "en": "No dedicated image registered yet. In the checklist by Bartolozzi and colleagues, this subspecies is listed from Obi Island and Obilatu Island in the Moluccan Archipelago.",
+        "zh": "尚未登记专用图片。在 Bartolozzi 等人的名录中，本亚种被整理为产自摩鹿加群岛的奥比岛与奥比拉图岛。",
+        "ko": "전용 이미지는 아직 등록되어 있지 않습니다. Bartolozzi 등의 체크리스트에서는 이 아종을 몰루카 제도의 오비섬과 오비라투섬 산으로 정리하고 있습니다.",
+        "es": "Todavía no hay una imagen específica registrada. En la lista de Bartolozzi y colaboradores, esta subespecie se registra de la isla Obi y de la isla Obilatu, en el archipiélago de las Molucas.",
+        "th": "ยังไม่มีภาพเฉพาะที่ลงทะเบียนไว้ ในเช็กลิสต์ของ Bartolozzi และคณะ ชนิดย่อยนี้ถูกจัดไว้ว่าพบในเกาะโอบีและเกาะโอบีลาตู ของหมู่เกาะโมลุกกะ",
+        "fr": "Aucune image d’illustration n’est encore enregistrée. Dans la checklist de Bartolozzi et collaborateurs, cette sous-espèce est signalée des îles Obi et Obilatu, dans l’archipel des Moluques."
+      },
+      "references": [
+        {
+          "citation": "Bartolozzi, L., Cianferoni, F. & Monte, C. 2011. Checklist of the Lucanidae from the Indo-Australian transition zone. In: Telnov, D. (ed.), Biodiversity, Biogeography and Nature Conservation in Wallacea and New Guinea, Vol. I: 43-80.",
+          "url": "https://www.researchgate.net/publication/258833367_Checklist_of_the_Lucanidae_from_the_Indo-Australian_transition_zone"
+        },
+        {
+          "citation": "水沼哲郎・永井信二 1994. 世界のクワガタムシ大図鑑. むし社, 東京."
+        }
+      ]
+    },
+    {
+      "slug": "aegus-platyodon-loeblei",
+      "name_latin": "Aegus platyodon loeblei",
+      "name": {
+        "ja": "?????",
+        "en": "Aegus platyodon loeblei",
+        "zh": "洛布雷",
+        "ko": "로에블레이",
+        "es": "Loeblei",
+        "th": "โลเอบลัย",
+        "fr": "Loeblei"
+      },
+      "region": {
+        "ja": "???????????????????",
+        "en": "Moluccan Archipelago (Kei Islands: Kei Kecil Island)",
+        "zh": "摩鹿加群岛（凯群岛：凯小岛）",
+        "ko": "몰루카 제도(카이 제도: 카이 케실섬)",
+        "es": "Archipiélago de las Molucas (islas Kai: isla Kei Kecil)",
+        "th": "หมู่เกาะโมลุกกะ (หมู่เกาะไค: เกาะเคอิล)",
+        "fr": "Archipel des Moluques (îles Kai : île Kei Kecil)"
+      },
+      "description": {
+        "ja": "Bartolozzi ????????????????????????????????????????",
+        "en": "No dedicated image registered yet. In the checklist by Bartolozzi and colleagues, this subspecies is listed from Kei Kecil Island in the Kei Islands.",
+        "zh": "尚未登记专用图片。在 Bartolozzi 等人的名录中，本亚种被记录于凯群岛中的凯小岛。",
+        "ko": "전용 이미지는 아직 등록되어 있지 않습니다. Bartolozzi 등의 체크리스트에서는 이 아종을 카이 제도의 카이 케실섬 산으로 정리하고 있습니다.",
+        "es": "Todavía no hay una imagen específica registrada. En la lista de Bartolozzi y colaboradores, esta subespecie se registra de la isla Kei Kecil, en las islas Kai.",
+        "th": "ยังไม่มีภาพเฉพาะที่ลงทะเบียนไว้ ในเช็กลิสต์ของ Bartolozzi และคณะ ชนิดย่อยนี้ถูกระบุว่าพบที่เกาะเคอิล ในหมู่เกาะไค",
+        "fr": "Aucune image d’illustration n’est encore enregistrée. Dans la checklist de Bartolozzi et collaborateurs, cette sous-espèce est signalée de l’île Kei Kecil, dans les îles Kai."
+      },
+      "references": [
+        {
+          "citation": "Bartolozzi, L., Cianferoni, F. & Monte, C. 2011. Checklist of the Lucanidae from the Indo-Australian transition zone. In: Telnov, D. (ed.), Biodiversity, Biogeography and Nature Conservation in Wallacea and New Guinea, Vol. I: 43-80.",
+          "url": "https://www.researchgate.net/publication/258833367_Checklist_of_the_Lucanidae_from_the_Indo-Australian_transition_zone"
+        },
+        {
+          "citation": "水沼哲郎・永井信二 1994. 世界のクワガタムシ大図鑑. むし社, 東京."
+        }
+      ]
+    },
+    {
+      "slug": "aegus-platyodon-tohyamai",
+      "name_latin": "Aegus platyodon tohyamai",
+      "name": {
+        "ja": "????",
+        "en": "Aegus platyodon tohyamai",
+        "zh": "东山",
+        "ko": "토야마",
+        "es": "Tohyamai",
+        "th": "โทยามะ",
+        "fr": "Tohyamai"
+      },
+      "region": {
+        "ja": "????????????",
+        "en": "Moluccas (Seram Island)",
+        "zh": "摩鹿加群岛（塞兰岛）",
+        "ko": "몰루카 제도(세람섬)",
+        "es": "Molucas (isla de Seram)",
+        "th": "หมู่เกาะโมลุกกะ (เกาะเซรัม)",
+        "fr": "Moluques (île de Seram)"
+      },
+      "description": {
+        "ja": "Bartolozzi ?????????????????????????????????????????",
+        "en": "No dedicated image registered yet. This is the Seram Island subspecies described by Nagai in 1994.",
+        "zh": "尚未登记专用图片。本亚种由 Nagai 于 1994 年记载，为塞兰岛产的类型。",
+        "ko": "전용 이미지는 아직 등록되어 있지 않습니다. Nagai가 1994년에 기재한 세람섬의 아종입니다。",
+        "es": "Todavía no hay una imagen específica registrada. Se trata de la subespecie de la isla de Seram descrita por Nagai en 1994.",
+        "th": "ยังไม่มีภาพเฉพาะของชนิดย่อยนี้ ชนิดย่อยนี้เป็นชนิดจากเกาะเซรัมที่ Nagai บรรยายไว้ในปี 1994",
+        "fr": "Aucune image dédiée n’est encore enregistrée. Il s’agit de la sous-espèce de l’île de Seram décrite par Nagai en 1994."
+      },
+      "references": [
+        {
+          "citation": "Bartolozzi, L., Cianferoni, F. & Monte, C. 2011. Checklist of the Lucanidae from the Indo-Australian transition zone. In: Telnov, D. (ed.), Biodiversity, Biogeography and Nature Conservation in Wallacea and New Guinea, Vol. I: 43-80.",
+          "url": "https://www.researchgate.net/publication/258833367_Checklist_of_the_Lucanidae_from_the_Indo-Australian_transition_zone"
+        },
+        {
+          "citation": "水沼哲郎・永井信二 1994. 世界のクワガタムシ大図鑑. むし社, 東京."
+        }
+      ]
+    },
+    {
+      "slug": "aegus-platyodon-bellus",
+      "name_latin": "Aegus platyodon bellus",
+      "name": {
+        "ja": "Aegus platyodon bellus",
+        "en": "Aegus platyodon bellus",
+        "zh": "Aegus platyodon bellus",
+        "ko": "Aegus platyodon bellus",
+        "es": "Aegus platyodon bellus",
+        "th": "Aegus platyodon bellus",
+        "fr": "Aegus platyodon bellus"
+      },
+      "region": {
+        "ja": "??????????????????? / ????????????????? / ??????????",
+        "en": "Bismarck Archipelago (New Ireland) / New Guinea (Indonesian Papua / Papua New Guinea)",
+        "zh": "俾斯麦群岛（新爱尔兰岛） / 新几内亚（印度尼西亚领巴布亚 / 巴布亚新几内亚）",
+        "ko": "비스마르크 제도(뉴아일랜드섬) / 뉴기니(인도네시아령 파푸아 / 파푸아뉴기니)",
+        "es": "Archipiélago de Bismarck (Nueva Irlanda) / Nueva Guinea (Papúa indonesia / Papúa Nueva Guinea)",
+        "th": "หมู่เกาะบิสมาร์ก (นิวไอร์แลนด์) / นิวกินี (ปาปัวของอินโดนีเซีย / ปาปัวนิวกินี)",
+        "fr": "Archipel Bismarck (Nouvelle-Irlande) / Nouvelle-Guinée (Papouasie indonésienne / Papouasie-Nouvelle-Guinée)"
+      },
+      "description": {
+        "ja": "Bartolozzi ??????????????????????????????????????????????????????????? Finch Haven?Watut?Aseki?Maprik ??????????????",
+        "en": "No dedicated image registered yet. Published records place this subspecies in New Ireland and New Guinea, with Papua New Guinea specimen records such as Finch Haven, Watut, Aseki, and Maprik.",
+        "zh": "尚未登记专用图片。文献记录显示本亚种分布于新爱尔兰岛与新几内亚，在巴布亚新几内亚侧有 Finch Haven、Watut、Aseki、Maprik 等标本记录。",
+        "ko": "전용 이미지는 아직 등록되어 있지 않습니다. 문헌상 이 아종은 뉴아일랜드와 뉴기니에서 기록되며, PNG 측에서는 Finch Haven, Watut, Aseki, Maprik 등의 표본 기록이 확인됩니다.",
+        "es": "Todavía no hay una imagen específica registrada. La bibliografía sitúa esta subespecie en Nueva Irlanda y Nueva Guinea, con registros de ejemplares en Papúa Nueva Guinea como Finch Haven, Watut, Aseki y Maprik.",
+        "th": "ยังไม่มีภาพเฉพาะที่ลงทะเบียนไว้ เอกสารระบุว่าชนิดย่อยนี้พบได้ที่นิวไอร์แลนด์และนิวกินี และฝั่งปาปัวนิวกินีมีบันทึกตัวอย่างจาก Finch Haven, Watut, Aseki และ Maprik",
+        "fr": "Aucune image dédiée n’est encore enregistrée. La bibliographie place cette sous-espèce en Nouvelle-Irlande et en Nouvelle-Guinée, avec des spécimens signalés côté Papouasie-Nouvelle-Guinée à Finch Haven, Watut, Aseki et Maprik."
+      },
+      "references": [
+        {
+          "citation": "Bartolozzi, L., Cianferoni, F. & Monte, C. 2011. Checklist of the Lucanidae from the Indo-Australian transition zone. In: Telnov, D. (ed.), Biodiversity, Biogeography and Nature Conservation in Wallacea and New Guinea, Vol. I: 43-80.",
+          "url": "https://www.researchgate.net/publication/258833367_Checklist_of_the_Lucanidae_from_the_Indo-Australian_transition_zone"
+        },
+        {
+          "citation": "Museums Victoria. Specimen records of Aegus platyodon bellus M?llenkamp, 1902 from Finch Haven, Watut, Aseki, and Maprik in Papua New Guinea. Accessed April 21, 2026.",
+          "url": "https://collections.museumsvictoria.com.au/specimens/2633591"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "citation": "Bartolozzi, L., Cianferoni, F. & Monte, C. 2011. Checklist of the Lucanidae from the Indo-Australian transition zone. In: Telnov, D. (ed.), Biodiversity, Biogeography and Nature Conservation in Wallacea and New Guinea, Vol. I: 43-80.",
+      "url": "https://www.researchgate.net/publication/258833367_Checklist_of_the_Lucanidae_from_the_Indo-Australian_transition_zone"
+    },
+    {
+      "citation": "水沼哲郎・永井信二 1994. 世界のクワガタムシ大図鑑. むし社, 東京."
+    }
+  ]
+}

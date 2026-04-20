@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue';
 import LightboxModalI18n from './components/LightboxModalI18n.vue';
 import SiteHeaderI18n from './components/SiteHeaderI18n.vue';
@@ -10,7 +10,18 @@ import {
     LANGUAGE_STORAGE_KEY,
     normalizeLocale,
 } from './i18n';
-import type { GalleryEntry, ImageSet, Locale, LocalizedText, PageData, SearchItem, SpeciesImage, SpeciesReference, SpeciesSummary } from './types';
+import type {
+    GalleryEntry,
+    ImageSet,
+    Locale,
+    LocalizedText,
+    PageData,
+    SearchItem,
+    SpeciesImage,
+    SpeciesReference,
+    SpeciesSummary,
+    SubspeciesSummary,
+} from './types';
 
 type GroupSummary = {
     slug: string;
@@ -30,6 +41,12 @@ type RelatedSpeciesCard = {
     name: LocalizedText;
     name_latin: string;
     thumb: string;
+};
+
+type SubspeciesLink = {
+    slug: string;
+    name: LocalizedText;
+    name_latin: string;
 };
 
 type GalleryFilterChip = {
@@ -67,20 +84,12 @@ const galleryEntries = computed(() => ((page.value.entries as GalleryEntry[]) ??
 const latestGallery = computed(() => ((page.value.latestGallery as GalleryEntry[]) ?? []));
 const relatedSpecies = computed(() => ((page.value.relatedSpecies as RelatedSpeciesCard[]) ?? []));
 const currentSpecies = computed(() => (page.value.species as SpeciesSummary | undefined));
-const currentReferences = computed(() => ((currentSpecies.value?.references as SpeciesReference[] | undefined) ?? []));
-const currentSpeciesImages = computed<SpeciesImage[]>(() => {
-    if (!currentSpecies.value) {
-        return [];
-    }
-
-    const images = currentSpecies.value.images as ImageSet | SpeciesImage[];
-
-    if (Array.isArray(images)) {
-        return images;
-    }
-
-    return [images];
-});
+const currentSubspeciesPage = computed(() => (page.value.subspecies as SubspeciesSummary | undefined));
+const currentTaxon = computed(() => currentSubspeciesPage.value ?? currentSpecies.value);
+const currentReferences = computed(() => ((currentTaxon.value?.references as SpeciesReference[] | undefined) ?? []));
+const currentSubspecies = computed(() => ((currentSpecies.value?.subspecies as SubspeciesSummary[] | undefined) ?? []));
+const currentSubspeciesLinks = computed(() => ((page.value.subspeciesLinks as SubspeciesLink[] | undefined) ?? []));
+const currentSpeciesImages = computed<SpeciesImage[]>(() => normalizeSpeciesLikeImages(currentTaxon.value?.images));
 const activeSpeciesImage = computed<SpeciesImage | null>(() => {
     if (currentSpeciesImages.value.length === 0) {
         return null;
@@ -96,6 +105,7 @@ const currentInfoTitle = computed(() => (page.value.title as LocalizedText | und
 const currentInfoLead = computed(() => (page.value.lead as LocalizedText | undefined));
 const currentInfoBody = computed(() => ((page.value.body as LocalizedText[] | undefined) ?? []));
 const currentFaqItems = computed(() => ((page.value.faqItems as { question: LocalizedText; answer: LocalizedText[] }[] | undefined) ?? []));
+const parentSpeciesLink = computed(() => (page.value.parentSpecies as NeighborLink | null | undefined));
 const groupGenusOptions = computed<GalleryFilterChip[]>(() => {
     const genusSet = new Set(speciesList.value.map((item) => item.genus).filter(Boolean));
 
@@ -124,12 +134,12 @@ const aboutContent: Record<Locale, Record<string, string>> = {
     ja: {
         eyebrow: 'PROJECT',
         title: 'About Us',
-        siteDescriptionBody1: '大きく羽化した個体はもちろん、小さな個体でも価値があります。地域によって変異がある種もあり、そういった変異を掲載できるのはWEB図鑑ならではではないでしょうか。もっと色々な甲虫が見たい、そう思えるようなサイト作りを心がけています。',
+        siteDescriptionBody1: '甲虫を中心に、種ごとの特徴や写真記録をまとめた図鑑サイトです。地域差や個体差も含めて、見比べながら楽しめる記録を少しずつ集めていきます。',
         operationsTitle: '運営',
         photoSubmissionTitle: '写真応募',
-        photoSubmissionBody1: '野外で見たもの、飼育で羽化したものなど、飼育品・野外品問わず写真を常時募集しています。提供いただいた写真は図鑑ページに掲載する場合があります。',
-        photoSubmissionBody2: '※種名が分かる場合は併記していただけると助かります。',
-        photoSubmissionBody3: '※応募はXのメンションまたはDMにてお願いします。',
+        photoSubmissionBody1: '野外で見たもの、飼育で羽化したものなど、飼育品・野外品を問わず写真を募集しています。提供いただいた写真は図鑑ページに掲載する場合があります。',
+        photoSubmissionBody2: '種名が分かる場合は併記していただけると助かります。',
+        photoSubmissionBody3: '応募はXのメンションまたはDMにてお願いします。',
     },
     en: {
         eyebrow: 'PROJECT',
@@ -144,65 +154,61 @@ const aboutContent: Record<Locale, Record<string, string>> = {
     zh: {
         eyebrow: 'PROJECT',
         title: 'About Us',
-        siteDescriptionTitle: '网站说明',
-        siteDescriptionBody1: '不仅大型羽化个体有价值，体型较小的个体同样值得记录。有些物种可能存在地域变异，而能够持续收录这些差异，正是网页图鉴的优势之一。',
+        siteDescriptionTitle: '关于本站',
+        siteDescriptionBody1: '这是一个以甲虫为中心的图鉴网站，持续整理各物种的特征与照片记录，也会逐步收录地域差异和个体差异。',
         operationsTitle: '运营',
         photoSubmissionTitle: '照片投稿',
-        photoSubmissionBody1: '我们正在征集昆虫照片，包括羽化个体、饲育个体、野外采集个体等。提供的照片可能会刊载在图鉴页面中。',
-        photoSubmissionBody2: '如果知道种名，请一并注明。',
+        photoSubmissionBody1: '无论是野外见到的个体，还是人工饲养羽化的个体，我们都欢迎投稿。提供的照片可能会刊载在图鉴页面中。',
+        photoSubmissionBody2: '如果知道种名，也请一并告知。',
         photoSubmissionBody3: '投稿请通过 X 的提及或私信发送。',
     },
     ko: {
         eyebrow: 'PROJECT',
         title: 'About Us',
         siteDescriptionTitle: '사이트 소개',
-        siteDescriptionBody1: '크게 우화한 개체는 물론이고, 작은 개체 역시 충분한 가치가 있습니다. 지역에 따라 변이가 나타나는 종도 있으며, 그런 변이를 계속 기록할 수 있다는 점은 웹 도감만의 장점이라고 생각합니다.',
+        siteDescriptionBody1: '갑충을 중심으로 종별 특징과 사진 기록을 정리해 나가는 도감 사이트입니다. 지역차와 개체차도 함께 비교하며 볼 수 있도록 조금씩 기록을 모아갑니다.',
         operationsTitle: '운영',
         photoSubmissionTitle: '사진 모집',
-        photoSubmissionBody1: '우화 개체, 사육 개체, 야외 채집 개체 등 곤충 사진을 모집하고 있습니다. 제공해 주신 사진은 도감 페이지에 실릴 수 있습니다.',
+        photoSubmissionBody1: '야외에서 본 개체나 사육 개체 등 다양한 곤충 사진을 받고 있습니다. 제공된 사진은 도감 페이지에 게재될 수 있습니다.',
         photoSubmissionBody2: '종명을 알고 있다면 함께 적어 주세요.',
-        photoSubmissionBody3: '제보는 X 멘션 또는 DM으로 부탁드립니다.',
+        photoSubmissionBody3: '제보는 X의 멘션 또는 DM으로 부탁드립니다.',
     },
     es: {
         eyebrow: 'PROJECT',
         title: 'About Us',
         siteDescriptionTitle: 'Sobre el sitio',
-        siteDescriptionBody1: 'Los ejemplares grandes recién emergidos son valiosos, pero los individuos pequeños también tienen valor. Algunas especies pueden mostrar variaciones regionales, y poder registrar esas diferencias es una de las ventajas de un catálogo web.',
-        operationsTitle: 'Operación',
-        photoSubmissionTitle: 'Envío de fotos',
-        photoSubmissionBody1: 'Buscamos fotos de insectos, ya sean ejemplares recién emergidos, criados en cautividad o recolectados en el campo. Las fotos enviadas pueden aparecer en páginas del catálogo.',
-        photoSubmissionBody2: 'Si conoces el nombre de la especie, inclúyelo también.',
-        photoSubmissionBody3: 'Envía tus aportes mediante menciones o mensajes directos en X.',
+        siteDescriptionBody1: 'Los ejemplares grandes reciﾃｩn emergidos son valiosos, pero los individuos pequeﾃｱos tambiﾃｩn tienen valor. Algunas especies pueden mostrar variaciones regionales, y poder registrar esas diferencias es una de las ventajas de un catﾃ｡logo web.',
+        operationsTitle: 'Operaciﾃｳn',
+        photoSubmissionTitle: 'Envﾃｭo de fotos',
+        photoSubmissionBody1: 'Buscamos fotos de insectos, ya sean ejemplares reciﾃｩn emergidos, criados en cautividad o recolectados en el campo. Las fotos enviadas pueden aparecer en pﾃ｡ginas del catﾃ｡logo.',
+        photoSubmissionBody2: 'Si conoces el nombre de la especie, inclﾃｺyelo tambiﾃｩn.',
+        photoSubmissionBody3: 'Envﾃｭa tus aportes mediante menciones o mensajes directos en X.',
     },
     th: {
         eyebrow: 'PROJECT',
         title: 'About Us',
-        siteDescriptionTitle: 'เกี่ยวกับเว็บไซต์',
-        siteDescriptionBody1: 'ไม่ใช่แค่ตัวเต็มวัยขนาดใหญ่เท่านั้นที่มีคุณค่า ตัวขนาดเล็กก็มีคุณค่าเช่นกัน บางชนิดอาจมีความแปรผันตามภูมิภาค และความสามารถในการบันทึกความแตกต่างเหล่านั้นคือจุดเด่นอย่างหนึ่งของสารานุกรมแบบเว็บ',
+        siteDescriptionTitle: 'เกี่ยวกับเว็บไซต์นี้',
+        siteDescriptionBody1: 'นี่คือเว็บไซต์สารานุกรมแมลงที่เน้นด้วงเป็นหลัก รวบรวมลักษณะของแต่ละชนิดและบันทึกภาพถ่าย รวมถึงความแตกต่างตามถิ่นอาศัยและความแตกต่างของแต่ละตัวด้วย',
         operationsTitle: 'ผู้ดูแล',
         photoSubmissionTitle: 'ส่งภาพถ่าย',
-        photoSubmissionBody1: 'เรากำลังเปิดรับภาพแมลง ทั้งตัวที่เพิ่งออกจากดักแด้ ตัวที่เลี้ยงไว้ และตัวที่เก็บจากภาคสนาม ภาพที่ส่งมาอาจถูกนำไปลงในหน้าสารานุกรม',
+        photoSubmissionBody1: 'เรารับภาพแมลงทั้งจากการพบในธรรมชาติและจากการเพาะเลี้ยง ภาพที่ส่งมาอาจถูกนำไปลงในหน้าสารานุกรมของเว็บไซต์',
         photoSubmissionBody2: 'หากทราบชื่อชนิด กรุณาระบุไว้ด้วย',
         photoSubmissionBody3: 'กรุณาส่งผ่านการเมนชันหรือ DM บน X',
     },
     fr: {
         eyebrow: 'PROJECT',
         title: 'About Us',
-        siteDescriptionTitle: 'À propos du site',
-        siteDescriptionBody1: 'Les grands individus fraîchement émergés ont bien sûr de la valeur, mais les petits individus en ont aussi. Certaines espèces peuvent présenter des variations régionales, et le fait de pouvoir les documenter est l’un des atouts d’un catalogue web.',
+        siteDescriptionTitle: 'ﾃ propos du site',
+        siteDescriptionBody1: 'Les grands individus fraﾃｮchement ﾃｩmergﾃｩs ont bien sﾃｻr de la valeur, mais les petits individus en ont aussi. Certaines espﾃｨces peuvent prﾃｩsenter des variations rﾃｩgionales, et le fait de pouvoir les documenter est l窶冰n des atouts d窶冰n catalogue web.',
         operationsTitle: 'Gestion',
         photoSubmissionTitle: 'Envoi de photos',
-        photoSubmissionBody1: 'Nous recherchons des photos d’insectes, qu’il s’agisse d’individus fraîchement émergés, élevés en captivité ou collectés sur le terrain. Les photos envoyées peuvent être publiées sur les pages du catalogue.',
-        photoSubmissionBody2: 'Si vous connaissez le nom de l’espèce, merci de l’indiquer.',
-        photoSubmissionBody3: 'Merci d’envoyer vos contributions via des mentions ou des messages privés sur X.',
+        photoSubmissionBody1: 'Nous recherchons des photos d窶冓nsectes, qu窶冓l s窶兮gisse d窶冓ndividus fraﾃｮchement ﾃｩmergﾃｩs, ﾃｩlevﾃｩs en captivitﾃｩ ou collectﾃｩs sur le terrain. Les photos envoyﾃｩes peuvent ﾃｪtre publiﾃｩes sur les pages du catalogue.',
+        photoSubmissionBody2: 'Si vous connaissez le nom de l窶册spﾃｨce, merci de l窶冓ndiquer.',
+        photoSubmissionBody3: 'Merci d窶册nvoyer vos contributions via des mentions ou des messages privﾃｩs sur X.',
     },
 };
 const about = computed(() => aboutContent[currentLanguage.value]);
-const aboutSiteDescriptionPrimary = computed(() =>
-    currentLanguage.value === 'ja'
-        ? '甲虫を中心に、種ごとの特徴や写真記録をまとめた図鑑サイトです。地域差や個体差も含めて、見比べながら楽しめる記録を少しずつ集めていきます。'
-        : about.value.siteDescriptionBody1,
-);
+const aboutSiteDescriptionPrimary = computed(() => about.value.siteDescriptionBody1);
 const galleryPrimaryFilters = computed<GalleryPrimaryFilter[]>(() => {
     const availableGroups = new Set(galleryEntries.value.map((entry) => entry.family_group).filter(Boolean));
     const availableTags = new Set(galleryEntries.value.flatMap((entry) => entry.tags ?? []));
@@ -296,18 +302,18 @@ function galleryTagLabel(tag: string) {
             ja: '野外品',
             en: 'Wild',
             zh: '野外个体',
-            ko: '야외품',
+            ko: '야외 개체',
             es: 'Silvestre',
-            th: 'ภาคสนาม',
+            th: 'ตัวอย่างจากธรรมชาติ',
             fr: 'Terrain',
         },
         bred: {
             ja: '飼育品',
             en: 'Captive',
             zh: '饲育个体',
-            ko: '사육품',
+            ko: '사육 개체',
             es: 'Cría',
-            th: 'เลี้ยง',
+            th: 'ตัวอย่างจากการเพาะเลี้ยง',
             fr: 'Élevage',
         },
         adult: {
@@ -360,7 +366,7 @@ function allGenusLabel() {
     const labels: Record<Locale, string> = {
         ja: 'すべての属',
         en: 'All genera',
-        zh: '全部属',
+        zh: '所有属',
         ko: '모든 속',
         es: 'Todos los géneros',
         th: 'ทุกสกุล',
@@ -456,19 +462,31 @@ function referencesTitle() {
     return labels[currentLanguage.value];
 }
 
+function normalizeSpeciesLikeImages(images?: ImageSet | SpeciesImage[]) {
+    if (!images) {
+        return [];
+    }
+
+    return Array.isArray(images) ? images : [images];
+}
+
+function subspeciesPrimaryImage(item: SubspeciesSummary) {
+    return normalizeSpeciesLikeImages(item.images)[0] ?? null;
+}
+
 function speciesImageAlt(index: number) {
-    if (!currentSpecies.value) {
+    if (!currentTaxon.value) {
         return '';
     }
 
     const image = currentSpeciesImages.value[index];
 
     if (!image) {
-        return localizedText(currentSpecies.value.name);
+        return localizedText(currentTaxon.value.name);
     }
 
     const caption = image.caption ? localizedText(image.caption) : '';
-    const name = localizedText(currentSpecies.value.name);
+    const name = localizedText(currentTaxon.value.name);
 
     return caption ? `${name} - ${caption}` : name;
 }
@@ -579,6 +597,7 @@ watch(currentGroup, () => {
             :current-language="currentLanguage"
             :eyebrow="t('headerEyebrow')"
             :brand="t('brand')"
+            :nav-home="t('navHome')"
             :nav-search="t('navSearch')"
             :nav-list="t('navList')"
             :nav-gallery="t('navGallery')"
@@ -636,6 +655,14 @@ watch(currentGroup, () => {
             <section v-if="page.kind === 'home'" class="section">
                 <div class="section-heading">
                     <div>
+                        <div v-if="page.kind === 'species'" class="detail-backlink-row">
+                            <a v-if="currentSpecies?.family_group" class="button button--secondary" :href="`/groups/${currentSpecies.family_group}/`">
+                                {{ t('backToGroup') }}
+                            </a>
+                            <a class="button button--secondary" href="/gallery/">
+                                {{ t('backToGallery') }}
+                            </a>
+                        </div>
                         <p class="eyebrow">{{ t('groupsEyebrow') }}</p>
                         <h2>{{ t('groupsTitle') }}</h2>
                     </div>
@@ -694,6 +721,11 @@ watch(currentGroup, () => {
             </section>
 
             <section v-if="page.kind === 'group'" class="section">
+                <div class="detail-backlink">
+                    <a class="button button--secondary" href="/">
+                        {{ t('backToHome') }}
+                    </a>
+                </div>
                 <p class="eyebrow">{{ t('groupsEyebrow') }}</p>
                 <h1>{{ localizedText(currentGroup?.label) }}</h1>
                 <p class="lead">{{ localizedText(currentGroup?.description) }}</p>
@@ -754,25 +786,50 @@ watch(currentGroup, () => {
                 </div>
             </section>
 
-            <section v-if="page.kind === 'species' && currentSpecies" class="section section--detail">
+            <section v-if="(page.kind === 'species' && currentSpecies) || (page.kind === 'subspecies' && currentSubspeciesPage)" class="section section--detail">
                 <div class="detail-grid">
                     <div>
-                        <p class="eyebrow">{{ t('speciesEyebrow') }}</p>
-                        <h1>{{ localizedText(currentSpecies.name) }}</h1>
-                        <p class="latin latin--large">{{ currentSpecies.name_latin }}</p>
-                        <p class="lead">{{ localizedText(currentSpecies.description) }}</p>
+                        <div v-if="page.kind === 'species'" class="detail-backlink-row">
+                            <a v-if="currentSpecies?.family_group" class="button button--secondary" :href="`/groups/${currentSpecies.family_group}/`">
+                                {{ t('backToGroup') }}
+                            </a>
+                            <a class="button button--secondary" href="/gallery/">
+                                {{ t('backToGallery') }}
+                            </a>
+                        </div>
+                        <div v-if="page.kind === 'subspecies' && parentSpeciesLink" class="detail-backlink">
+                            <a class="button button--secondary" :href="`/species/${parentSpeciesLink.slug}/`">
+                                {{ t('backToSpecies') }}
+                            </a>
+                        </div>
+                        <p class="eyebrow">{{ page.kind === 'subspecies' ? t('subspeciesEyebrow') : t('speciesEyebrow') }}</p>
+                        <h1>{{ page.kind === 'subspecies' ? currentTaxon?.name_latin : localizedText(currentTaxon?.name) }}</h1>
+                        <p class="latin latin--large">{{ currentTaxon?.name_latin }}</p>
+                        <p v-if="currentTaxon?.description" class="lead">{{ localizedText(currentTaxon.description) }}</p>
                         <dl class="meta-list">
                             <div>
-                                <dt>{{ t('genusLabel') }}</dt>
-                                <dd><a :href="String(page.genusHref)">{{ currentSpecies.genus }}</a></dd>
-                            </div>
-                            <div>
                                 <dt>{{ t('familyLabel') }}</dt>
-                                <dd>{{ groupLabel(currentSpecies.family_group) }}</dd>
+                                <dd>{{ groupLabel((currentSpecies?.family_group ?? page.familyGroup) as string) }}</dd>
                             </div>
                             <div>
+                                <dt>{{ t('genusLabel') }}</dt>
+                                <dd><a :href="String(page.genusHref)">{{ currentSpecies?.genus ?? page.genusName }}</a></dd>
+                            </div>
+                            <div v-if="page.kind === 'subspecies' && parentSpeciesLink">
+                                <dt>{{ t('speciesLabel') }}</dt>
+                                <dd><a :href="`/species/${parentSpeciesLink.slug}/`">{{ parentSpeciesLink.name_latin }}</a></dd>
+                            </div>
+                            <div v-if="page.kind === 'species' && currentSubspeciesLinks.length > 0">
+                                <dt>{{ t('subspeciesLabel') }}</dt>
+                                <dd class="meta-link-list meta-link-list--stacked">
+                                    <a v-for="item in currentSubspeciesLinks" :key="item.slug" :href="`/subspecies/${item.slug}/`">
+                                        {{ item.name_latin }}
+                                    </a>
+                                </dd>
+                            </div>
+                            <div v-if="currentTaxon?.region">
                                 <dt>{{ t('regionLabel') }}</dt>
-                                <dd>{{ localizedText(currentSpecies.region) }}</dd>
+                                <dd>{{ localizedText(currentTaxon.region) }}</dd>
                             </div>
                         </dl>
                         <div v-if="currentReferences.length > 0" class="reference-block">
@@ -800,7 +857,7 @@ watch(currentGroup, () => {
                         <div class="thumb-row">
                             <button
                                 v-for="(image, index) in currentSpeciesImages"
-                                :key="`${currentSpecies.slug}-${index}`"
+                                :key="`${currentTaxon?.slug}-${index}`"
                                 type="button"
                                 class="thumb-button"
                                 :class="{ 'is-active': index === selectedSpeciesImageIndex }"
@@ -812,7 +869,7 @@ watch(currentGroup, () => {
                     </div>
                 </div>
 
-                <div v-if="relatedSpecies.length > 0" class="related-block">
+                <div v-if="page.kind === 'species' && relatedSpecies.length > 0" class="related-block">
                     <div class="section-heading">
                         <div>
                             <p class="eyebrow">{{ t('relatedEyebrow') }}</p>
@@ -831,10 +888,10 @@ watch(currentGroup, () => {
                     </div>
                 </div>
 
-                <div class="pager">
-                    <a v-if="previousSpecies" :href="`/species/${previousSpecies.slug}/`">← {{ localizedText(previousSpecies.name) }}</a>
+                <div v-if="page.kind === 'species'" class="pager">
+                    <a v-if="previousSpecies" :href="`/species/${previousSpecies.slug}/`">{{ localizedText(previousSpecies.name) }}</a>
                     <span v-else>{{ t('firstInGenus') }}</span>
-                    <a v-if="nextSpecies" :href="`/species/${nextSpecies.slug}/`">{{ localizedText(nextSpecies.name) }} →</a>
+                    <a v-if="nextSpecies" :href="`/species/${nextSpecies.slug}/`">{{ localizedText(nextSpecies.name) }}</a>
                     <span v-else>{{ t('lastInGenus') }}</span>
                 </div>
             </section>
@@ -866,6 +923,11 @@ watch(currentGroup, () => {
             </section>
 
             <section v-if="page.kind === 'gallery'" class="section">
+                <div class="detail-backlink">
+                    <a class="button button--secondary" href="/">
+                        {{ t('backToHome') }}
+                    </a>
+                </div>
                 <p class="eyebrow">{{ t('galleryEyebrow') }}</p>
                 <h1>{{ t('galleryTitle') }}</h1>
                 <p class="lead">{{ t('galleryLead') }}</p>
@@ -966,3 +1028,4 @@ watch(currentGroup, () => {
         <LightboxModalI18n :image="lightboxImage" :close-label="t('close')" @close="closeLightbox" />
     </div>
 </template>
+

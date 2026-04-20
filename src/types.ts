@@ -21,6 +21,16 @@ export type SpeciesReference = {
     url?: string;
 };
 
+export type SubspeciesSummary = {
+    slug: string;
+    name_latin: string;
+    name: LocalizedText;
+    region?: LocalizedText;
+    description?: LocalizedText;
+    images?: ImageSet | SpeciesImage[];
+    references?: SpeciesReference[];
+};
+
 export type SpeciesSummary = {
     id: string;
     slug: string;
@@ -33,6 +43,7 @@ export type SpeciesSummary = {
     aliases: LocalizedArray;
     images: ImageSet | SpeciesImage[];
     references?: SpeciesReference[];
+    subspecies?: SubspeciesSummary[];
 };
 
 export type SearchItem = {
@@ -71,7 +82,7 @@ export type MetaInfo = {
 };
 
 export type PageData = {
-    kind: 'home' | 'group' | 'genus' | 'species' | 'search' | 'gallery' | 'info';
+    kind: 'home' | 'group' | 'genus' | 'species' | 'subspecies' | 'search' | 'gallery' | 'info';
     meta: MetaInfo;
     [key: string]: unknown;
 };

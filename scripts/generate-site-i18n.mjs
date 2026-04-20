@@ -214,7 +214,40 @@ function normalizeSpeciesImages(item) {
 }
 
 function primarySpeciesImage(item) {
-    return normalizeSpeciesImages(item)[0];
+    return collectSpeciesDisplayImages(item)[0];
+}
+
+function placeholderSubspeciesImages() {
+    return [
+        {
+            thumb: '/images/placeholders/subspecies-coming-soon-thumb.svg',
+            medium: '/images/placeholders/subspecies-coming-soon-medium.svg',
+            large: '/images/placeholders/subspecies-coming-soon-large.svg',
+            caption: localized(
+                '亜種画像準備中',
+                'Subspecies image coming soon',
+                '亚种图片准备中',
+                '아종 이미지 준비 중',
+                'Imagen de subespecie en preparación',
+                'กำลังเตรียมภาพของชนิดย่อย',
+                'Image de sous-espèce en préparation',
+            ),
+        },
+    ];
+}
+
+function normalizeSubspecies(item) {
+    return (item.subspecies ?? []).map((subspecies) => ({
+        ...subspecies,
+        images: subspecies.images ? normalizeSpeciesImages(subspecies) : placeholderSubspeciesImages(),
+    }));
+}
+
+function collectSpeciesDisplayImages(item) {
+    const subspeciesImages = (item.subspecies ?? [])
+        .filter((subspecies) => subspecies.images)
+        .flatMap((subspecies) => normalizeSpeciesImages(subspecies));
+    return subspeciesImages.length > 0 ? subspeciesImages : normalizeSpeciesImages(item);
 }
 
 function renderPage(pageData) {
@@ -655,7 +688,7 @@ for (const item of species) {
             slug: related.slug,
             name: related.name,
             name_latin: related.name_latin,
-            thumb: related.images.thumb,
+            thumb: primarySpeciesImage(related).thumb,
         }));
 
     writeGeneratedText(
@@ -674,12 +707,48 @@ for (const item of species) {
                 ),
                 description: item.description,
             },
-            species: item,
+            species: {
+                ...item,
+                images: collectSpeciesDisplayImages(item),
+                subspecies: normalizeSubspecies(item),
+            },
+            subspeciesLinks: normalizeSubspecies(item).map((subspecies) => ({
+                slug: subspecies.slug,
+                name: subspecies.name,
+                name_latin: subspecies.name_latin,
+            })),
             genusHref: `/genus/${item.genus.toLowerCase()}/`,
             previous: previous ? { slug: previous.slug, name: previous.name, name_latin: previous.name_latin } : null,
             next: next ? { slug: next.slug, name: next.name, name_latin: next.name_latin } : null,
             relatedSpecies,
         }),
     );
+
+    for (const subspecies of normalizeSubspecies(item)) {
+        writeGeneratedText(
+            path.join('subspecies', subspecies.slug, 'index.html'),
+            renderPage({
+                kind: 'subspecies',
+                meta: {
+                    title: localized(
+                        `${subspecies.name.ja} | 昆虫図録 - ベータ版`,
+                        `${subspecies.name.en} | Insect Catalog - Beta`,
+                        `${subspecies.name.zh} | 昆虫图录 - 测试版`,
+                        `${subspecies.name.ko} | 곤충 도록 - 베타판`,
+                        `${subspecies.name.es} | Catálogo de Insectos - Beta`,
+                        `${subspecies.name.th} | สารบบแมลง - รุ่นเบตา`,
+                        `${subspecies.name.fr} | Catalogue d’Insectes - Bêta`,
+                    ),
+                    description: subspecies.description ?? item.description,
+                },
+                species: item,
+                subspecies,
+                genusName: item.genus,
+                familyGroup: item.family_group,
+                genusHref: `/genus/${item.genus.toLowerCase()}/`,
+                parentSpecies: { slug: item.slug, name: item.name, name_latin: item.name_latin },
+            }),
+        );
+    }
 }
 

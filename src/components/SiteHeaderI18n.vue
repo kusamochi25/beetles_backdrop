@@ -6,6 +6,7 @@ defineProps<{
     currentLanguage: Locale;
     eyebrow: string;
     brand: string;
+    navHome: string;
     navSearch: string;
     navList: string;
     navGallery: string;
@@ -36,6 +37,7 @@ defineEmits<{
                 </button>
             </div>
             <nav class="site-nav">
+                <a href="/">{{ navHome }}</a>
                 <a href="/search/">{{ navSearch }}</a>
                 <a href="/groups/kabutomushi/">{{ navList }}</a>
                 <a href="/gallery/">{{ navGallery }}</a>

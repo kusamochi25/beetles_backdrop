@@ -1,6 +1,6 @@
-{
+﻿{
   "id": "sp-001",
-  "updated_at": "2026-04-10",
+  "updated_at": "2026-04-16",
   "slug": "dynastes-hercules",
   "name_latin": "Dynastes hercules",
   "name": {
@@ -18,32 +18,322 @@
     "ja": "中南米 / カリブ海地域",
     "en": "Central and South America / Caribbean",
     "zh": "中南美洲 / 加勒比地区",
-    "ko": "중남미 / 카리브 해 지역",
+    "ko": "중남미 / 카리브 지역",
     "es": "Centro y Sudamérica / Caribe",
-    "th": "อเมริกากลางและใต้ / แคริบเบียน",
+    "th": "อเมริกากลางและอเมริกาใต้ / แคริบเบียน",
     "fr": "Amérique centrale et du Sud / Caraïbes"
   },
   "aliases": {
-    "ja": ["ヘラクレス", "ヘラクレスカブト"],
-    "en": ["Hercules beetle"],
-    "zh": ["赫拉克勒斯兜虫"],
-    "ko": ["헤라클레스장수풍뎅이"],
-    "es": ["Escarabajo Hércules"],
-    "th": ["ด้วงเฮอร์คิวลิส"],
-    "fr": ["Scarabée Hercule"]
+    "ja": [
+      "ヘラクレス",
+      "ヘラクレスオオカブト"
+    ],
+    "en": [
+      "Hercules beetle"
+    ],
+    "zh": [
+      "赫拉克勒斯甲虫"
+    ],
+    "ko": [
+      "헤라클레스장수풍뎅이"
+    ],
+    "es": [
+      "Escarabajo Hércules"
+    ],
+    "th": [
+      "ด้วงเฮอร์คิวลิส"
+    ],
+    "fr": [
+      "Scarabée Hercule"
+    ]
   },
   "description": {
     "ja": "基準となる原名亜種はグアドループ諸島に生息する。世界最大級の甲虫として知られ、日本では「ヘラクレスオオカブト」の名は昆虫好きでなくとも広く知られている。頭角には柔らかい毛が生えており、何度でも触りたくなる触り心地である。",
     "en": "The nominotypical subspecies, which serves as the standard form, occurs in the Guadeloupe Islands. It is known as one of the largest beetles in the world, and in Japan the name \"Hercules beetle\" is widely recognized even by people who are not especially interested in insects. The cephalic horn bears soft hair and has a texture that makes you want to touch it again and again.",
-    "zh": "作为标准型的原名亚种分布于瓜德罗普群岛。它被认为是世界最大级的甲虫之一，在日本，“赫拉克勒斯大兜虫”这一名称即使在并非昆虫爱好者的人群中也广为人知。头角上生有柔软的毛，触感让人忍不住想一再触摸。",
-    "ko": "기준이 되는 원명아종은 과들루프 제도에 서식합니다. 세계 최대급의 갑충으로 알려져 있으며, 일본에서는 \"헤라클레스장수풍뎅이\"라는 이름이 곤충 애호가가 아니어도 널리 알려져 있습니다. 머리뿔에는 부드러운 털이 나 있어 자꾸 만져 보고 싶어지는 촉감을 가지고 있습니다.",
+    "zh": "作为标准型的原名亚种分布于瓜德罗普群岛。它被认为是世界最大级别的甲虫之一，在日本，\"赫拉克勒斯甲虫\"这个名字即使在并不特别喜欢昆虫的人之间也相当知名。头角上生有柔软的毛，触感让人忍不住一摸再摸。",
+    "ko": "기준이 되는 원명아종은 과들루프 제도에 분포합니다. 세계 최대급의 딱정벌레로 알려져 있으며, 일본에서는 곤충 애호가가 아니더라도 ‘헤라클레스장수풍뎅이’라는 이름이 널리 알려져 있습니다. 머리뿔에는 부드러운 털이 나 있어 자꾸 만져 보고 싶어지는 촉감을 가집니다.",
     "es": "La subespecie nominal, que sirve como forma de referencia, habita en las islas de Guadalupe. Es conocida como uno de los escarabajos más grandes del mundo y, en Japón, el nombre \"escarabajo Hércules\" es ampliamente reconocido incluso por personas que no son aficionadas a los insectos. El cuerno cefálico está cubierto de pelos suaves y tiene una textura que invita a tocarlo una y otra vez.",
-    "th": "ชนิดย่อยชื่อเดียวกับชนิดหลักซึ่งถือเป็นแบบมาตรฐาน อาศัยอยู่ในหมู่เกาะกวาเดอลูป มันเป็นที่รู้จักว่าเป็นหนึ่งในแมลงปีกแข็งที่ใหญ่ที่สุดในโลก และในญี่ปุ่นชื่อ \"ด้วงเฮอร์คิวลิส\" ก็เป็นที่รู้จักอย่างกว้างขวางแม้ในหมู่คนที่ไม่ได้ชื่นชอบแมลงโดยเฉพาะ บนเขาส่วนหัวมีขนอ่อนนุ่มขึ้นอยู่ และให้สัมผัสที่ชวนให้อยากแตะซ้ำแล้วซ้ำอีก",
+    "th": "ชนิดย่อยต้นแบบซึ่งใช้เป็นมาตรฐานอาศัยอยู่ในหมู่เกาะกวาเดอลูป เป็นที่รู้จักว่าเป็นหนึ่งในด้วงที่ใหญ่ที่สุดในโลก และในญี่ปุ่นชื่อ \"ด้วงเฮอร์คิวลิส\" ก็เป็นที่รู้จักอย่างกว้างขวางแม้ในหมู่คนที่ไม่ได้ชอบแมลงเป็นพิเศษ เขาบนหัวมีขนอ่อนนุ่ม ทำให้มีสัมผัสที่อยากลองจับซ้ำแล้วซ้ำอีก",
     "fr": "La sous-espèce nominale, qui constitue la forme de référence, vit dans les îles de la Guadeloupe. Elle est connue comme l’un des plus grands coléoptères du monde et, au Japon, le nom de « scarabée Hercule » est largement connu même des personnes qui ne s’intéressent pas particulièrement aux insectes. La corne céphalique porte un duvet doux, avec un toucher qui donne envie d’y revenir encore et encore."
   },
   "images": {
     "thumb": "/images/species/dynastes-hercules/thumb.svg",
     "medium": "/images/species/dynastes-hercules/medium.svg",
     "large": "/images/species/dynastes-hercules/large.svg"
-  }
+  },
+  "subspecies": [
+    {
+      "slug": "dynastes-hercules-hercules",
+      "name_latin": "Dynastes hercules hercules",
+      "name": {
+        "ja": "原名亜種\n(Dynastes hercules hercules)",
+        "en": "Dynastes hercules hercules",
+        "zh": "赫拉克勒斯原名亚种",
+        "ko": "헤라클레스 원명아종",
+        "es": "Dynastes hercules hercules",
+        "th": "Dynastes hercules hercules",
+        "fr": "Dynastes hercules hercules"
+      },
+      "region": {
+        "ja": "グアドループ諸島",
+        "en": "Guadeloupe Islands",
+        "zh": "瓜德罗普群岛",
+        "ko": "과들루프 제도",
+        "es": "Islas de Guadalupe",
+        "th": "หมู่เกาะกวาเดอลูป",
+        "fr": "Îles de la Guadeloupe"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-ecuatorianus",
+      "name_latin": "Dynastes hercules ecuatorianus",
+      "name": {
+        "ja": "エクアトリアヌス\n(Dynastes hercules ecuatorianus)",
+        "en": "Dynastes hercules ecuatorianus",
+        "zh": "厄瓜多尔亚种",
+        "ko": "에콰토리아누스",
+        "es": "Dynastes hercules ecuatorianus",
+        "th": "Dynastes hercules ecuatorianus",
+        "fr": "Dynastes hercules ecuatorianus"
+      },
+      "region": {
+        "ja": "エクアドル",
+        "en": "Ecuador",
+        "zh": "厄瓜多尔",
+        "ko": "에콰도르",
+        "es": "Ecuador",
+        "th": "เอกวาดอร์",
+        "fr": "Équateur"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-reidi",
+      "name_latin": "Dynastes hercules reidi",
+      "name": {
+        "ja": "レイディ\n(Dynastes hercules reidi)",
+        "en": "Dynastes hercules reidi",
+        "zh": "雷迪亚种",
+        "ko": "레이디아종",
+        "es": "Dynastes hercules reidi",
+        "th": "Dynastes hercules reidi",
+        "fr": "Dynastes hercules reidi"
+      },
+      "region": {
+        "ja": "小アンティル諸島",
+        "en": "Lesser Antilles",
+        "zh": "小安的列斯群岛",
+        "ko": "소앤틸리스 제도",
+        "es": "Antillas Menores",
+        "th": "หมู่เกาะเลสเซอร์แอนทิลลีส",
+        "fr": "Petites Antilles"
+      },
+      "description": {
+        "ja": "本サイトでは baudrii を reidi に含める扱いとする。",
+        "en": "On this site, baudrii is treated together with reidi.",
+        "zh": "本站暂将 baudrii 并入 reidi 处理。",
+        "ko": "이 사이트에서는 baudrii를 reidi에 포함해 다룹니다.",
+        "es": "En este sitio, baudrii se trata junto con reidi.",
+        "th": "ในเว็บไซต์นี้ baudrii จะถูกรวมไว้กับ reidi",
+        "fr": "Sur ce site, baudrii est traité avec reidi."
+      }
+    },
+    {
+      "slug": "dynastes-hercules-lichyi",
+      "name_latin": "Dynastes hercules lichyi",
+      "name": {
+        "ja": "リッキー\n(Dynastes hercules lichyi)",
+        "en": "Dynastes hercules lichyi",
+        "zh": "利基亚种",
+        "ko": "리키이",
+        "es": "Dynastes hercules lichyi",
+        "th": "Dynastes hercules lichyi",
+        "fr": "Dynastes hercules lichyi"
+      },
+      "region": {
+        "ja": "ベネズエラ",
+        "en": "Venezuela",
+        "zh": "委内瑞拉",
+        "ko": "베네수엘라",
+        "es": "Venezuela",
+        "th": "เวเนซุเอลา",
+        "fr": "Venezuela"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-occidentalis",
+      "name_latin": "Dynastes hercules occidentalis",
+      "name": {
+        "ja": "オキシデンタリス\n(Dynastes hercules occidentalis)",
+        "en": "Dynastes hercules occidentalis",
+        "zh": "西方亚种",
+        "ko": "옥시덴탈리스",
+        "es": "Dynastes hercules occidentalis",
+        "th": "Dynastes hercules occidentalis",
+        "fr": "Dynastes hercules occidentalis"
+      },
+      "region": {
+        "ja": "コロンビア",
+        "en": "Colombia",
+        "zh": "哥伦比亚",
+        "ko": "콜롬비아",
+        "es": "Colombia",
+        "th": "โคลอมเบีย",
+        "fr": "Colombie"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-septentrionalis",
+      "name_latin": "Dynastes hercules septentrionalis",
+      "name": {
+        "ja": "セプテントリオナリス\n(Dynastes hercules septentrionalis)",
+        "en": "Dynastes hercules septentrionalis",
+        "zh": "北方亚种",
+        "ko": "셉텐트리오날리스",
+        "es": "Dynastes hercules septentrionalis",
+        "th": "Dynastes hercules septentrionalis",
+        "fr": "Dynastes hercules septentrionalis"
+      },
+      "region": {
+        "ja": "中米",
+        "en": "Central America",
+        "zh": "中美洲",
+        "ko": "중앙아메리카",
+        "es": "Centroamérica",
+        "th": "อเมริกากลาง",
+        "fr": "Amérique centrale"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-paschoali",
+      "name_latin": "Dynastes hercules paschoali",
+      "name": {
+        "ja": "パスコアリ\n(Dynastes hercules paschoali)",
+        "en": "Dynastes hercules paschoali",
+        "zh": "帕斯科阿里亚种",
+        "ko": "파스코알리",
+        "es": "Dynastes hercules paschoali",
+        "th": "Dynastes hercules paschoali",
+        "fr": "Dynastes hercules paschoali"
+      },
+      "region": {
+        "ja": "ブラジル",
+        "en": "Brazil",
+        "zh": "巴西",
+        "ko": "브라질",
+        "es": "Brasil",
+        "th": "บราซิล",
+        "fr": "Brésil"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-tuxtlaensis",
+      "name_latin": "Dynastes hercules tuxtlaensis",
+      "name": {
+        "ja": "トゥクストラエンシス\n(Dynastes hercules tuxtlaensis)",
+        "en": "Dynastes hercules tuxtlaensis",
+        "zh": "图克斯特拉亚种",
+        "ko": "툭스트라엔시스",
+        "es": "Dynastes hercules tuxtlaensis",
+        "th": "Dynastes hercules tuxtlaensis",
+        "fr": "Dynastes hercules tuxtlaensis"
+      },
+      "region": {
+        "ja": "メキシコ",
+        "en": "Mexico",
+        "zh": "墨西哥",
+        "ko": "멕시코",
+        "es": "México",
+        "th": "เม็กซิโก",
+        "fr": "Mexique"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-trinidadensis",
+      "name_latin": "Dynastes hercules trinidadensis",
+      "name": {
+        "ja": "トリニダーデンシス\n(Dynastes hercules trinidadensis)",
+        "en": "Dynastes hercules trinidadensis",
+        "zh": "特立尼达亚种",
+        "ko": "트리니다덴시스",
+        "es": "Dynastes hercules trinidadensis",
+        "th": "Dynastes hercules trinidadensis",
+        "fr": "Dynastes hercules trinidadensis"
+      },
+      "region": {
+        "ja": "トリニダード",
+        "en": "Trinidad",
+        "zh": "特立尼达",
+        "ko": "트리니다드",
+        "es": "Trinidad",
+        "th": "ตรินิแดด",
+        "fr": "Trinité"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-bleuzeni",
+      "name_latin": "Dynastes hercules bleuzeni",
+      "name": {
+        "ja": "ブリュゼニ\n(Dynastes hercules bleuzeni)",
+        "en": "Dynastes hercules bleuzeni",
+        "zh": "布勒泽尼亚种",
+        "ko": "블뢰제니",
+        "es": "Dynastes hercules bleuzeni",
+        "th": "Dynastes hercules bleuzeni",
+        "fr": "Dynastes hercules bleuzeni"
+      },
+      "region": {
+        "ja": "ベネズエラ",
+        "en": "Venezuela",
+        "zh": "委内瑞拉",
+        "ko": "베네수엘라",
+        "es": "Venezuela",
+        "th": "เวเนซุเอลา",
+        "fr": "Venezuela"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-morishimai",
+      "name_latin": "Dynastes hercules morishimai",
+      "name": {
+        "ja": "モリシマイ\n(Dynastes hercules morishimai)",
+        "en": "Dynastes hercules morishimai",
+        "zh": "森岛亚种",
+        "ko": "모리시마이",
+        "es": "Dynastes hercules morishimai",
+        "th": "Dynastes hercules morishimai",
+        "fr": "Dynastes hercules morishimai"
+      },
+      "region": {
+        "ja": "ボリビア",
+        "en": "Bolivia",
+        "zh": "玻利维亚",
+        "ko": "볼리비아",
+        "es": "Bolivia",
+        "th": "โบลิเวีย",
+        "fr": "Bolivie"
+      }
+    },
+    {
+      "slug": "dynastes-hercules-takakuwai",
+      "name_latin": "Dynastes hercules takakuwai",
+      "name": {
+        "ja": "タカクワイ\n(Dynastes hercules takakuwai)",
+        "en": "Dynastes hercules takakuwai",
+        "zh": "高桑亚种",
+        "ko": "타카쿠와이",
+        "es": "Dynastes hercules takakuwai",
+        "th": "Dynastes hercules takakuwai",
+        "fr": "Dynastes hercules takakuwai"
+      },
+      "region": {
+        "ja": "ペルー",
+        "en": "Peru",
+        "zh": "秘鲁",
+        "ko": "페루",
+        "es": "Perú",
+        "th": "เปรู",
+        "fr": "Pérou"
+      }
+    }
+  ]
 }
