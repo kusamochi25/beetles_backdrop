@@ -11,7 +11,6 @@ import {
     normalizeLocale,
 } from './i18n';
 import type {
-    GalleryEntry,
     ImageSet,
     Locale,
     LocalizedText,
@@ -49,12 +48,7 @@ type SubspeciesLink = {
     name_latin: string;
 };
 
-type GalleryFilterChip = {
-    key: string;
-    label: string;
-};
-
-type GalleryPrimaryFilter = {
+type FilterChip = {
     key: string;
     label: string;
 };
@@ -68,9 +62,6 @@ const searchLoaded = ref(false);
 const searchError = ref('');
 const visibleCount = ref(10);
 const lightboxImage = ref<{ src: string; alt: string } | null>(null);
-const selectedGalleryFilters = ref<string[]>([]);
-const selectedGalleryGenusPrimary = ref('');
-const selectedGalleryGenusSecondary = ref('');
 const selectedSpeciesImageIndex = ref(0);
 const selectedGroupGenus = ref('');
 
@@ -80,8 +71,6 @@ const metaTitle = computed(() => getLocalizedText(page.value.meta.title, current
 const speciesList = computed(() => ((page.value.species as SpeciesSummary[]) ?? []));
 const homeGroups = computed(() => ((page.value.groups as GroupSummary[]) ?? []));
 const homeFeatured = computed(() => ((page.value.featuredSpecies as SpeciesSummary[]) ?? []));
-const galleryEntries = computed(() => ((page.value.entries as GalleryEntry[]) ?? []));
-const latestGallery = computed(() => ((page.value.latestGallery as GalleryEntry[]) ?? []));
 const relatedSpecies = computed(() => ((page.value.relatedSpecies as RelatedSpeciesCard[]) ?? []));
 const currentSpecies = computed(() => (page.value.species as SpeciesSummary | undefined));
 const currentSubspeciesPage = computed(() => (page.value.subspecies as SubspeciesSummary | undefined));
@@ -106,7 +95,7 @@ const currentInfoLead = computed(() => (page.value.lead as LocalizedText | undef
 const currentInfoBody = computed(() => ((page.value.body as LocalizedText[] | undefined) ?? []));
 const currentFaqItems = computed(() => ((page.value.faqItems as { question: LocalizedText; answer: LocalizedText[] }[] | undefined) ?? []));
 const parentSpeciesLink = computed(() => (page.value.parentSpecies as NeighborLink | null | undefined));
-const groupGenusOptions = computed<GalleryFilterChip[]>(() => {
+const groupGenusOptions = computed<FilterChip[]>(() => {
     const genusSet = new Set(speciesList.value.map((item) => item.genus).filter(Boolean));
 
     return [...genusSet]
@@ -209,62 +198,6 @@ const aboutContent: Record<Locale, Record<string, string>> = {
 };
 const about = computed(() => aboutContent[currentLanguage.value]);
 const aboutSiteDescriptionPrimary = computed(() => about.value.siteDescriptionBody1);
-const galleryPrimaryFilters = computed<GalleryPrimaryFilter[]>(() => {
-    const availableGroups = new Set(galleryEntries.value.map((entry) => entry.family_group).filter(Boolean));
-    const availableTags = new Set(galleryEntries.value.flatMap((entry) => entry.tags ?? []));
-    const orderedFilters = [
-        { key: 'group:kabutomushi', label: groupLabel('kabutomushi') },
-        { key: 'group:kuwagata', label: groupLabel('kuwagata') },
-        { key: 'group:koganemushi', label: groupLabel('koganemushi') },
-        { key: 'group:others', label: groupLabel('others') },
-        { key: 'tag:wild', label: galleryTagLabel('wild') },
-        { key: 'tag:bred', label: galleryTagLabel('bred') },
-        { key: 'tag:adult', label: galleryTagLabel('adult') },
-        { key: 'tag:larva', label: galleryTagLabel('larva') },
-    ];
-
-    return orderedFilters.filter((filter) => {
-        const [kind, value] = filter.key.split(':');
-
-        if (kind === 'group') {
-            return availableGroups.has(value);
-        }
-
-        return availableTags.has(value);
-    });
-});
-const galleryGenusOptions = computed<GalleryFilterChip[]>(() => {
-    const genusSet = new Set(galleryEntries.value.map((entry) => entry.genus).filter(Boolean));
-
-    return [...genusSet]
-        .sort((left, right) => String(left).localeCompare(String(right)))
-        .map((genus) => ({
-            key: String(genus),
-            label: `${genus} ${t.value('genusLabel')}`,
-        }));
-});
-const filteredGalleryEntries = computed(() => {
-    return galleryEntries.value.filter((entry) => {
-        const matchesPrimary = selectedGalleryFilters.value.every((filterKey) => {
-            const [kind, value] = filterKey.split(':');
-
-            if (kind === 'tag') {
-                return (entry.tags ?? []).includes(value);
-            }
-
-            if (kind === 'group') {
-                return entry.family_group === value;
-            }
-
-            return false;
-        });
-
-        const selectedGenera = [selectedGalleryGenusPrimary.value, selectedGalleryGenusSecondary.value].filter(Boolean);
-        const matchesGenus = selectedGenera.length === 0 || selectedGenera.includes(entry.genus ?? '');
-
-        return matchesPrimary && matchesGenus;
-    });
-});
 
 const filteredSearchResults = computed(() => {
     const normalized = searchQuery.value.trim().toLowerCase();
@@ -294,58 +227,6 @@ function taxonomyLabel(group: string, genus: string) {
 
 function localizedText(value: LocalizedText | undefined) {
     return getLocalizedText(value, currentLanguage.value);
-}
-
-function galleryTagLabel(tag: string) {
-    const labels: Record<string, Record<Locale, string>> = {
-        wild: {
-            ja: '野外品',
-            en: 'Wild',
-            zh: '野外个体',
-            ko: '야외 개체',
-            es: 'Silvestre',
-            th: 'ตัวอย่างจากธรรมชาติ',
-            fr: 'Terrain',
-        },
-        bred: {
-            ja: '飼育品',
-            en: 'Captive',
-            zh: '饲育个体',
-            ko: '사육 개체',
-            es: 'Cría',
-            th: 'ตัวอย่างจากการเพาะเลี้ยง',
-            fr: 'Élevage',
-        },
-        adult: {
-            ja: '成虫',
-            en: 'Adult',
-            zh: '成虫',
-            ko: '성충',
-            es: 'Adulto',
-            th: 'ตัวเต็มวัย',
-            fr: 'Adulte',
-        },
-        larva: {
-            ja: '幼虫',
-            en: 'Larva',
-            zh: '幼虫',
-            ko: '유충',
-            es: 'Larva',
-            th: 'ตัวอ่อน',
-            fr: 'Larve',
-        },
-    };
-
-    return labels[tag]?.[currentLanguage.value] ?? tag;
-}
-
-function toggleGalleryFilter(filterKey: string) {
-    if (selectedGalleryFilters.value.includes(filterKey)) {
-        selectedGalleryFilters.value = selectedGalleryFilters.value.filter((item) => item !== filterKey);
-        return;
-    }
-
-    selectedGalleryFilters.value = [...selectedGalleryFilters.value, filterKey];
 }
 
 function detailedFilterLabel() {
@@ -388,64 +269,6 @@ function groupDetailedFilterLabel() {
     };
 
     return labels[currentLanguage.value];
-}
-
-function detailedFilterSecondaryLabel() {
-    const labels: Record<Locale, string> = {
-        ja: '詳細絞込 2',
-        en: 'Detailed Filter 2',
-        zh: '详细筛选 2',
-        ko: '상세 필터 2',
-        es: 'Filtro detallado 2',
-        th: 'ตัวกรองแบบละเอียด 2',
-        fr: 'Filtre détaillé 2',
-    };
-
-    return labels[currentLanguage.value];
-}
-
-function genusOptionsForSecondary() {
-    return galleryGenusOptions.value.filter((option) => option.key !== selectedGalleryGenusPrimary.value);
-}
-
-function galleryEntryChips(entry: GalleryEntry) {
-    const chips: string[] = [];
-
-    for (const tag of entry.tags ?? []) {
-        chips.push(galleryTagLabel(tag));
-    }
-
-    if (entry.family_group) {
-        chips.push(groupLabel(entry.family_group));
-    }
-
-    if (entry.genus) {
-        chips.push(`${entry.genus} ${t.value('genusLabel')}`);
-    }
-
-    return [...new Set(chips)];
-}
-
-function photoCreditLabel() {
-    const labels: Record<Locale, string> = {
-        ja: '写真提供',
-        en: 'Photo by',
-        zh: '照片提供',
-        ko: '사진 제공',
-        es: 'Foto de',
-        th: 'ภาพโดย',
-        fr: 'Photo fournie par',
-    };
-
-    return labels[currentLanguage.value];
-}
-
-function galleryCredit(entry: GalleryEntry) {
-    return entry.credit?.name ?? entry.photographer ?? '';
-}
-
-function galleryCreditUrl(entry: GalleryEntry) {
-    return entry.credit?.url ?? '';
 }
 
 function referencesTitle() {
@@ -569,16 +392,7 @@ watch(searchQuery, (value) => {
 });
 
 watch(currentLanguage, () => {
-    selectedGalleryFilters.value = [];
-    selectedGalleryGenusPrimary.value = '';
-    selectedGalleryGenusSecondary.value = '';
     selectedGroupGenus.value = '';
-});
-
-watch(selectedGalleryGenusPrimary, (value) => {
-    if (value && selectedGalleryGenusSecondary.value === value) {
-        selectedGalleryGenusSecondary.value = '';
-    }
 });
 
 watch(selectedGroupGenus, () => {
@@ -653,9 +467,6 @@ watch(currentGroup, () => {
                         <div v-if="page.kind === 'species'" class="detail-backlink-row">
                             <a v-if="currentSpecies?.family_group" class="button button--secondary" :href="`/groups/${currentSpecies.family_group}/`">
                                 {{ t('backToGroup') }}
-                            </a>
-                            <a class="button button--secondary" href="/gallery/">
-                                {{ t('backToGallery') }}
                             </a>
                         </div>
                         <p class="eyebrow">{{ t('groupsEyebrow') }}</p>
@@ -887,72 +698,6 @@ watch(currentGroup, () => {
                             <h3>{{ localizedText(item.name) }}</h3>
                             <p class="latin">{{ item.name_latin }}</p>
                             <a :href="item.href">{{ t('detailLink') }}</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section v-if="page.kind === 'gallery'" class="section">
-                <div class="detail-backlink">
-                    <a class="button button--secondary" href="/">
-                        {{ t('backToHome') }}
-                    </a>
-                </div>
-                <p class="eyebrow">{{ t('galleryEyebrow') }}</p>
-                <h1>{{ t('galleryTitle') }}</h1>
-                <p class="lead">{{ t('galleryLead') }}</p>
-                <div v-if="galleryPrimaryFilters.length > 0" class="filter-row">
-                    <button
-                        v-for="filter in galleryPrimaryFilters"
-                        :key="filter.key"
-                        type="button"
-                        class="filter-chip"
-                        :class="{ 'is-active': selectedGalleryFilters.includes(filter.key) }"
-                        @click="toggleGalleryFilter(filter.key)"
-                    >
-                        {{ filter.label }}
-                    </button>
-                </div>
-                <div v-if="galleryGenusOptions.length > 0" class="gallery-select-row">
-                    <label class="gallery-select">
-                        <span>{{ detailedFilterLabel() }}</span>
-                        <select v-model="selectedGalleryGenusPrimary">
-                            <option value="">{{ allGenusLabel() }}</option>
-                            <option v-for="genus in galleryGenusOptions" :key="genus.key" :value="genus.key">
-                                {{ genus.label }}
-                            </option>
-                        </select>
-                    </label>
-                    <label v-if="galleryGenusOptions.length > 1" class="gallery-select">
-                        <span>{{ detailedFilterSecondaryLabel() }}</span>
-                        <select v-model="selectedGalleryGenusSecondary">
-                            <option value="">{{ allGenusLabel() }}</option>
-                            <option v-for="genus in genusOptionsForSecondary()" :key="genus.key" :value="genus.key">
-                                {{ genus.label }}
-                            </option>
-                        </select>
-                    </label>
-                </div>
-                <div class="gallery-grid gallery-grid--wide">
-                    <article v-for="entry in filteredGalleryEntries" :key="entry.id" class="gallery-card">
-                        <button type="button" class="gallery-button" @click="openLightbox(entry.images.large, localizedText(entry.title))">
-                            <img :src="entry.images.medium" :alt="localizedText(entry.title)" loading="lazy" />
-                        </button>
-                        <div class="gallery-card__body">
-                            <div v-if="galleryEntryChips(entry).length" class="tag-row">
-                                <span v-for="tag in galleryEntryChips(entry)" :key="tag" class="chip">{{ tag }}</span>
-                            </div>
-                            <h3>{{ localizedText(entry.title) }}</h3>
-                            <p>{{ localizedText(entry.caption) }}</p>
-                            <p>{{ localizedText(entry.location) }}</p>
-                            <p v-if="galleryCredit(entry)">
-                                {{ photoCreditLabel() }}:
-                                <a v-if="galleryCreditUrl(entry)" :href="galleryCreditUrl(entry)" target="_blank" rel="noreferrer">
-                                    {{ galleryCredit(entry) }}
-                                </a>
-                                <template v-else>{{ galleryCredit(entry) }}</template>
-                            </p>
-                            <a :href="entry.species_href">{{ t('detailLink') }}</a>
                         </div>
                     </article>
                 </div>

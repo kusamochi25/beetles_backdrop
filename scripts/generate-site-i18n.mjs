@@ -168,7 +168,6 @@ function sanitizeColor(seed) {
         kuwagata: ['#2d3136', '#5f6b73', '#d3dce2'],
         koganemushi: ['#0f5132', '#1f9d73', '#c9f4da'],
         others: ['#1f3a5f', '#4f86c6', '#d6ecff'],
-        gallery: ['#6a3f13', '#b8752c', '#f8dcb0'],
     };
 
     return palette[seed] ?? ['#3f3f46', '#71717a', '#e4e4e7'];
@@ -279,7 +278,6 @@ function renderPage(pageData) {
 resetGeneratedPages();
 
 const species = readJsonFiles('data/species').sort((left, right) => left.name_latin.localeCompare(right.name_latin));
-const gallery = readJsonFiles('data/gallery');
 const speciesBySlug = new Map(species.map((item) => [item.slug, item]));
 const homeDescription = localized(
     '甲虫を中心に、種ごとの特徴や写真記録をまとめた図鑑サイトです。地域差や個体差も含めて、見比べながら楽しめる記録を少しずつ集めていきます。',
@@ -337,12 +335,6 @@ for (const item of species) {
     }
 }
 
-for (const entry of gallery) {
-    writePlaceholderImage(entry.images.thumb, entry.species_slug, 'gallery', [480, 320]);
-    writePlaceholderImage(entry.images.medium, entry.species_slug, 'gallery', [960, 640]);
-    writePlaceholderImage(entry.images.large, entry.species_slug, 'gallery', [1600, 1100]);
-}
-
 writeGeneratedText(
     'index.html',
     renderPage({
@@ -354,17 +346,9 @@ writeGeneratedText(
         stats: {
             speciesCount: species.length,
             genusCount: genusList.length,
-            galleryCount: gallery.length,
         },
         featuredSpecies,
         groups: groupSummaries,
-        latestGallery: gallery.slice(0, 3).map((entry) => ({
-            ...entry,
-            family_group: speciesBySlug.get(entry.species_slug)?.family_group,
-            genus: speciesBySlug.get(entry.species_slug)?.genus,
-            species_name: speciesBySlug.get(entry.species_slug)?.name,
-            species_href: `/species/${entry.species_slug}/`,
-        })),
     }),
 );
 
@@ -387,32 +371,6 @@ writeGeneratedText(
     }),
 );
 
-writeGeneratedText(
-    path.join('gallery', 'index.html'),
-    renderPage({
-        kind: 'gallery',
-        meta: {
-            title: localized('みんなで作る写真集 | 昆虫図録 - ベータ版', 'Photo Album | Insect Catalog - Beta', '大家一起制作的照片集 | 昆虫图录 - 测试版', '함께 만드는 사진집 | 곤충 도록 - 베타판', 'Álbum de fotos | Catálogo de Insectos - Beta', 'สมุดภาพที่ทุกคนช่วยกันสร้าง | สารบบแมลง - รุ่นเบตา', 'Album photo | Catalogue d’Insectes - Bêta'),
-            description: localized(
-                '公開用画像をサイズ別に持つギャラリーの最小サンプルです。',
-                'A minimal gallery sample with public image variants.',
-                '带有多尺寸公开图片的图库最小示例。',
-                '공개용 이미지 사이즈를 나눈 갤러리의 최소 샘플입니다.',
-                'Una muestra mínima de galería con variantes públicas de imagen.',
-                'ตัวอย่างขั้นต่ำของแกลเลอรีที่มีภาพเผยแพร่หลายขนาด',
-                'Un exemple minimal de galerie avec images publiques en plusieurs tailles.',
-            ),
-        },
-        entries: gallery.map((entry) => ({
-            ...entry,
-            family_group: speciesBySlug.get(entry.species_slug)?.family_group,
-            genus: speciesBySlug.get(entry.species_slug)?.genus,
-            species_name: speciesBySlug.get(entry.species_slug)?.name,
-            species_href: `/species/${entry.species_slug}/`,
-        })),
-    }),
-);
-
 const infoPages = [
     {
         slug: 'privacy',
@@ -429,13 +387,13 @@ const infoPages = [
                 'Lorsque vous nous contactez ou soumettez des photos, nous pouvons vous demander des informations telles que votre nom, votre compte sur les réseaux sociaux et le contenu de votre message. Ces informations sont utilisées pour répondre aux demandes, confirmer la publication et vous contacter si nécessaire.',
             ),
             localized(
-                'ご提供いただいた写真は、本サイト内の図鑑ページおよび写真集ページでの掲載を目的として使用します。応募いただいた写真を本サイト以外の用途で利用する場合は、必要に応じてあらためて確認を行います。',
-                'Submitted photos are used for publication on this site, including species pages and the gallery. If we wish to use a submitted photo for any purpose outside this site, we will contact you again when necessary.',
-                '您提供的照片将用于本网站内的图鉴页面与照片集页面。如需将投稿照片用于本网站以外的用途，我们会在必要时再次征求您的确认。',
-                '제공해 주신 사진은 본 사이트의 종 페이지 및 사진집 페이지 게재를 목적으로 사용됩니다. 본 사이트 외의 용도로 사용하려는 경우에는 필요에 따라 다시 확인을 드립니다.',
-                'Las fotografías enviadas se utilizarán para su publicación dentro de este sitio, incluidas las páginas de especies y la galería. Si deseamos usarlas fuera de este sitio, volveremos a consultarlo cuando sea necesario.',
-                'ภาพถ่ายที่ส่งมาจะใช้เพื่อเผยแพร่ภายในเว็บไซต์นี้ เช่น หน้าชนิดและหน้ารวมภาพ หากต้องการนำภาพไปใช้นอกเว็บไซต์นี้ เราจะติดต่อเพื่อยืนยันอีกครั้งตามความเหมาะสม',
-                'Les photos fournies sont utilisées pour une publication sur ce site, notamment sur les pages d’espèces et la galerie. Si nous souhaitons utiliser une photo soumise en dehors de ce site, nous vous recontacterons si nécessaire.',
+                'ご提供いただいた写真は、本サイト内の図鑑ページでの掲載を目的として使用します。応募いただいた写真を本サイト以外の用途で利用する場合は、必要に応じてあらためて確認を行います。',
+                'Submitted photos are used for publication on this site, mainly on species pages. If we wish to use a submitted photo for any purpose outside this site, we will contact you again when necessary.',
+                '您提供的照片将用于本网站内的图鉴页面。如需将投稿照片用于本网站以外的用途，我们会在必要时再次征求您的确认。',
+                '제공해 주신 사진은 본 사이트의 도감 페이지 게재를 목적으로 사용됩니다. 본 사이트 외의 용도로 사용하려는 경우에는 필요에 따라 다시 확인을 드립니다.',
+                'Las fotografías enviadas se utilizarán para su publicación dentro de este sitio, principalmente en las páginas de especies. Si deseamos usarlas fuera de este sitio, volveremos a consultarlo cuando sea necesario.',
+                'ภาพถ่ายที่ส่งมาจะใช้เพื่อเผยแพร่ภายในเว็บไซต์นี้ โดยหลักจะใช้ในหน้าสารานุกรมของชนิด หากต้องการนำภาพไปใช้นอกเว็บไซต์นี้ เราจะติดต่อเพื่อยืนยันอีกครั้งตามความเหมาะสม',
+                'Les photos fournies sont utilisées pour une publication sur ce site, principalement sur les pages d’espèces. Si nous souhaitons utiliser une photo soumise en dehors de ce site, nous vous recontacterons si nécessaire.',
             ),
             localized(
                 '本サイトでは、アクセス状況の把握や広告配信のために、Cookie 等の技術を利用する場合があります。今後、Google AdSense などの広告サービスを利用する場合、広告配信事業者が Cookie を使用して利用者の興味に応じた広告を表示することがあります。',
@@ -543,7 +501,7 @@ const infoPages = [
                 answer: [
                     localized('応募可能です。', 'Yes.', '可以。', '가능합니다.', 'Sí.', 'ได้', 'Oui.'),
                     localized('図鑑として作っているページは、できるだけ野外個体をベースに掲載したいと考えています。ただし、日本では飼育個体の流通が多いこと、野外個体は小型が多いこと、野外個体の標本が十分に集まらないことなどから、飼育個体を図鑑ページに登録する場合もあります。', 'For the catalog pages, we would ideally like to present mainly wild specimens. However, captive-bred individuals may also be added to the catalog because captive material is widely circulated in Japan, wild specimens are often smaller, and enough wild reference material is not always available.', '图鉴页面原则上仍希望尽量以野外个体为基础进行展示。不过，由于日本流通的饲育个体较多、野外个体往往较小、且野外标本不易充分收集等原因，图鉴页面中也可能收录饲育个体。', '도감 페이지는 가능하면 야외 개체를 기준으로 구성하고 싶습니다. 다만 일본에서는 사육 개체의 유통이 많고, 야외 개체는 소형이 많은 편이며, 야외 표본이 충분히 모이지 않는 경우도 있어 사육 개체를 도감 페이지에 등록하는 경우도 있습니다.', 'En las páginas del catálogo preferimos, en lo posible, basarnos en ejemplares silvestres. Sin embargo, también podemos registrar ejemplares criados en cautividad, ya que en Japón circulan muchos, los ejemplares silvestres suelen ser más pequeños y no siempre es posible reunir suficientes referencias de campo.', 'สำหรับหน้าสารานุกรม เราอยากใช้ตัวจากธรรมชาติเป็นหลักเท่าที่ทำได้ อย่างไรก็ตาม ในญี่ปุ่นมีตัวเพาะเลี้ยงหมุนเวียนอยู่มาก ตัวจากธรรมชาติมักมีขนาดเล็ก และบางครั้งก็รวบรวมตัวอย่างจากธรรมชาติได้ไม่เพียงพอ จึงอาจมีการลงทะเบียนตัวเพาะเลี้ยงในหน้าสารานุกรมด้วย', 'Pour les pages du catalogue, nous souhaitons idéalement nous baser autant que possible sur des individus sauvages. Toutefois, des individus élevés en captivité peuvent aussi être ajoutés, car ils circulent largement au Japon, les individus sauvages sont souvent plus petits, et il n’est pas toujours possible de réunir suffisamment de spécimens de terrain.'),
-                    localized('なお、ギャラリーについては飼育個体・野外個体を問わず募集しています。', 'For the gallery, we welcome both captive-bred and wild specimens.', '至于照片集，则无论是饲育个体还是野外个体都欢迎投稿。', '갤러리는 사육 개체와 야외 개체를 가리지 않고 모집하고 있습니다.', 'En la galería aceptamos tanto ejemplares criados en cautividad como ejemplares silvestres.', 'ส่วนแกลเลอรีนั้น รับทั้งตัวเพาะเลี้ยงและตัวจากธรรมชาติ', 'Pour la galerie, nous acceptons aussi bien les individus élevés en captivité que les individus sauvages.'),
+                    localized('なお、写真については飼育個体・野外個体を問わず募集しています。', 'We welcome both captive-bred and wild specimens for photo submissions.', '无论是饲育个体还是野外个体，我们都欢迎照片投稿。', '사진 제보는 사육 개체와 야외 개체를 가리지 않고 받고 있습니다.', 'Aceptamos fotos tanto de ejemplares criados en cautividad como de ejemplares silvestres.', 'เรารับภาพถ่ายทั้งจากตัวเพาะเลี้ยงและตัวจากธรรมชาติ', 'Nous acceptons des photos aussi bien d’individus élevés en captivité que d’individus sauvages.'),
                 ],
             },
             {
@@ -557,7 +515,7 @@ const infoPages = [
                 question: localized('掲載時の名前はどう表示されますか', 'How will my name be shown when a photo is published?', '刊登时姓名会如何显示？', '게재 시 이름은 어떻게 표시되나요?', '¿Cómo se mostrará mi nombre al publicar una foto?', 'เวลาลงภาพจะระบุชื่ออย่างไร', 'Comment mon nom sera-t-il affiché lors de la publication ?'),
                 answer: [
                     localized('掲載時のお名前は、@sample_link のような形で表示します。', 'Your name will be displayed in a format such as @sample_link.', '刊登时会以 @sample_link 这类形式显示。', '게재 시 이름은 @sample_link 와 같은 형식으로 표시됩니다.', 'Se mostrará en un formato como @sample_link.', 'ชื่อจะแสดงในรูปแบบเช่น @sample_link', 'Il sera affiché sous une forme comme @sample_link.'),
-                    localized('詳しくはギャラリーページの掲載例をご確認ください。', 'Please see the gallery page for examples of how credits are shown.', '具体示例请参见照片集页面。', '자세한 예시는 갤러리 페이지를 확인해 주세요.', 'Consulte la galería para ver ejemplos.', 'ดูตัวอย่างได้ที่หน้าแกลเลอรี', 'Veuillez consulter la galerie pour voir des exemples.'),
+                    localized('掲載時のお名前の見え方は、図鑑ページの実際の表示をご確認ください。', 'Please check the actual species pages to see how names are displayed when published.', '刊登时姓名的显示方式，请参考图鉴页面的实际显示。', '게재 시 이름이 어떻게 보이는지는 실제 도감 페이지 표시를 확인해 주세요.', 'Consulte las páginas reales de especies para ver cómo se muestran los nombres al publicarse.', 'รูปแบบการแสดงชื่อเมื่อเผยแพร่ กรุณาดูจากหน้าสารานุกรมจริง', 'Veuillez consulter les pages d’espèces pour voir comment les noms sont affichés lors de la publication.'),
                 ],
             },
             {

@@ -57,32 +57,13 @@ export type SearchItem = {
     href: string;
 };
 
-export type GalleryEntry = {
-    id: string;
-    species_slug: string;
-    title: LocalizedText;
-    caption: LocalizedText;
-    location: LocalizedText;
-    photographer?: string;
-    credit?: {
-        name: string;
-        url?: string;
-    };
-    tags?: string[];
-    family_group?: string;
-    genus?: string;
-    images: ImageSet;
-    species_href: string;
-    species_name?: LocalizedText;
-};
-
 export type MetaInfo = {
     title: LocalizedText;
     description: LocalizedText;
 };
 
 export type PageData = {
-    kind: 'home' | 'group' | 'genus' | 'species' | 'subspecies' | 'search' | 'gallery' | 'info';
+    kind: 'home' | 'group' | 'genus' | 'species' | 'subspecies' | 'search' | 'info';
     meta: MetaInfo;
     [key: string]: unknown;
 };
