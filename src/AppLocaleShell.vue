@@ -600,7 +600,6 @@ watch(currentGroup, () => {
             :nav-home="t('navHome')"
             :nav-search="t('navSearch')"
             :nav-list="t('navList')"
-            :nav-gallery="t('navGallery')"
             @language-change="setLanguage"
         />
 
@@ -645,10 +644,6 @@ watch(currentGroup, () => {
                         <span>{{ t('genusCount') }}</span>
                         <strong>{{ page.stats?.genusCount }}</strong>
                     </div>
-                    <div class="stat-card">
-                        <span>{{ t('galleryCount') }}</span>
-                        <strong>{{ page.stats?.galleryCount }}</strong>
-                    </div>
                 </div>
             </section>
 
@@ -674,28 +669,6 @@ watch(currentGroup, () => {
                         <h3>{{ localizedText(group.label) }}</h3>
                         <p>{{ localizedText(group.description) }}</p>
                         <a :href="`/groups/${group.slug}/`">{{ t('listView') }}</a>
-                    </article>
-                </div>
-            </section>
-
-            <section v-if="page.kind === 'home'" class="section">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">{{ t('photosEyebrow') }}</p>
-                        <h2>{{ t('photosTitle') }}</h2>
-                    </div>
-                    <a class="text-link" href="/gallery/">{{ t('galleryLink') }}</a>
-                </div>
-                <div class="gallery-grid">
-                    <article v-for="entry in latestGallery" :key="entry.id" class="gallery-card">
-                        <img :src="entry.images.thumb" :alt="localizedText(entry.title)" loading="lazy" />
-                        <div class="gallery-card__body">
-                            <div v-if="entry.tags?.length" class="tag-row">
-                                <span v-for="tag in entry.tags" :key="tag" class="chip">{{ galleryTagLabel(tag) }}</span>
-                            </div>
-                            <h3>{{ localizedText(entry.title) }}</h3>
-                            <p>{{ localizedText(entry.species_name) }} / {{ localizedText(entry.location) }}</p>
-                        </div>
                     </article>
                 </div>
             </section>
@@ -792,9 +765,6 @@ watch(currentGroup, () => {
                         <div v-if="page.kind === 'species'" class="detail-backlink-row">
                             <a v-if="currentSpecies?.family_group" class="button button--secondary" :href="`/groups/${currentSpecies.family_group}/`">
                                 {{ t('backToGroup') }}
-                            </a>
-                            <a class="button button--secondary" href="/gallery/">
-                                {{ t('backToGallery') }}
                             </a>
                         </div>
                         <div v-if="page.kind === 'subspecies' && parentSpeciesLink" class="detail-backlink">
