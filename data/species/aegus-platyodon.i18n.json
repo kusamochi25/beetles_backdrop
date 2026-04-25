@@ -91,7 +91,7 @@
       "slug": "aegus-platyodon-platyodon",
       "name_latin": "Aegus platyodon platyodon",
       "name": {
-        "ja": "????",
+        "ja": "原名亜種",
         "en": "Aegus platyodon platyodon",
         "zh": "原名亚种",
         "ko": "원명아종",
@@ -100,7 +100,7 @@
         "fr": "Sous-espèce nominale"
       },
       "region": {
-        "ja": "???????????? / ?????? / ????? / ??????? / ????? / ??????",
+        "ja": "モルッカ諸島（バチャン島 / ハルマヘラ島 / カシルタ島 / マンディオリ島 / モロタイ島 / テルテナ島）",
         "en": "Moluccas (Halmahera / Mandiole / Ternate / Bacan)",
         "zh": "摩鹿加群岛（哈马黑拉岛 / 曼迪奥利岛 / 特尔纳特岛 / 巴占岛）",
         "ko": "몰루카 제도(할마헤라섬 / 만디올리섬 / 테르나테섬 / 바찬섬)",
@@ -109,7 +109,7 @@
         "fr": "Moluques (Halmahera / Mandiole / Ternate / Bacan)"
       },
       "description": {
-        "ja": "Bartolozzi ??????????????????????????????????????????????????????????????????????",
+        "ja": "Bartolozzi らのチェックリストでは、バチャン島、ハルマヘラ島、カシルタ島、マンディオリ島、モロタイ島、テルテナ島に分布する原名亜種として整理されている。",
         "en": "In the checklist by Bartolozzi and colleagues, this is treated as the nominotypical subspecies distributed on Halmahera, Mandiole, Ternate, and Bacan.",
         "zh": "? Bartolozzi ????????????????????????????????????????????",
         "ko": "Bartolozzi ?? ???????? ?????, ?????, ?????, ???? ???? ?????? ???? ??.",
@@ -131,7 +131,7 @@
       "slug": "aegus-platyodon-leopoldi",
       "name_latin": "Aegus platyodon leopoldi",
       "name": {
-        "ja": "?????",
+        "ja": "レオポルド",
         "en": "Aegus platyodon leopoldi",
         "zh": "雷奥波尔迪",
         "ko": "레오폴디",
@@ -140,7 +140,7 @@
         "fr": "Leopoldi"
       },
       "region": {
-        "ja": "????????????????? / ??????????????????",
+        "ja": "ラジャアンパット諸島（ミソール島） / ニューギニア（インドネシア領パプア）",
         "en": "Moluccan Archipelago (Misool Island) / New Guinea (western part)",
         "zh": "摩鲁加群岛（密索尔岛） / 新几内亚（西部）",
         "ko": "몰루카 제도(미솔 섬) / 뉴기니아(서부)",
@@ -161,7 +161,7 @@
         }
       ],
       "description": {
-        "ja": "Bartolozzi ??????????????????????????????????????????",
+        "ja": "Bartolozzi らのチェックリストでは、ミソール島とインドネシア領パプアの亜種として整理されている。",
         "en": "Images are registered for this subspecies. In the checklist by Bartolozzi and colleagues, it is treated as the form from Misool Island and western New Guinea.",
         "zh": "该亚种的图像已登录。在 Bartolozzi 等人的检核名录中，它被整理为分布于密索尔岛与新几内亚西部的亚种。",
         "ko": "이 아종은 이미지가 등록되어 있습니다. Bartolozzi 등의 체크리스트에서는 미솔 섬과 뉴기니아 서부에서 분포하는 아종으로 정리되어 있습니다.",
@@ -183,7 +183,7 @@
       "slug": "aegus-platyodon-otanii",
       "name_latin": "Aegus platyodon otanii",
       "name": {
-        "ja": "????",
+        "ja": "オオタニ",
         "en": "Aegus platyodon otanii",
         "zh": "大谷",
         "ko": "오타니",
@@ -192,7 +192,7 @@
         "fr": "Otanii"
       },
       "region": {
-        "ja": "?????????? / ???????",
+        "ja": "モルッカ諸島（オビ島 / オビラツウ島）",
         "en": "Moluccan Archipelago (Obi Island / Obilatu Island)",
         "zh": "摩鹿加群岛（奥比岛 / 奥比拉图岛）",
         "ko": "몰루카 제도(오비섬 / 오비라투섬)",
@@ -201,7 +201,7 @@
         "fr": "Archipel des Moluques (île Obi / île Obilatu)"
       },
       "description": {
-        "ja": "Bartolozzi ???????????????????????????????????????????????",
+        "ja": "Bartolozzi らのチェックリストでは、モルッカ諸島のうちオビ島とオビラツウ島からの亜種として整理されている。",
         "en": "No dedicated image registered yet. In the checklist by Bartolozzi and colleagues, this subspecies is listed from Obi Island and Obilatu Island in the Moluccan Archipelago.",
         "zh": "尚未登记专用图片。在 Bartolozzi 等人的名录中，本亚种被整理为产自摩鹿加群岛的奥比岛与奥比拉图岛。",
         "ko": "전용 이미지는 아직 등록되어 있지 않습니다. Bartolozzi 등의 체크리스트에서는 이 아종을 몰루카 제도의 오비섬과 오비라투섬 산으로 정리하고 있습니다.",
@@ -223,7 +223,7 @@
       "slug": "aegus-platyodon-loeblei",
       "name_latin": "Aegus platyodon loeblei",
       "name": {
-        "ja": "?????",
+        "ja": "ロエブレイ",
         "en": "Aegus platyodon loeblei",
         "zh": "洛布雷",
         "ko": "로에블레이",
@@ -232,7 +232,7 @@
         "fr": "Loeblei"
       },
       "region": {
-        "ja": "???????????????????",
+        "ja": "モルッカ諸島（カイ諸島：カイケチル島）",
         "en": "Moluccan Archipelago (Kei Islands: Kei Kecil Island)",
         "zh": "摩鹿加群岛（凯群岛：凯小岛）",
         "ko": "몰루카 제도(카이 제도: 카이 케실섬)",
@@ -241,7 +241,7 @@
         "fr": "Archipel des Moluques (îles Kai : île Kei Kecil)"
       },
       "description": {
-        "ja": "Bartolozzi ????????????????????????????????????????",
+        "ja": "Bartolozzi らのチェックリストでは、カイ諸島のうちカイケチル島からの亜種として扱われている。",
         "en": "No dedicated image registered yet. In the checklist by Bartolozzi and colleagues, this subspecies is listed from Kei Kecil Island in the Kei Islands.",
         "zh": "尚未登记专用图片。在 Bartolozzi 等人的名录中，本亚种被记录于凯群岛中的凯小岛。",
         "ko": "전용 이미지는 아직 등록되어 있지 않습니다. Bartolozzi 등의 체크리스트에서는 이 아종을 카이 제도의 카이 케실섬 산으로 정리하고 있습니다.",
@@ -263,7 +263,7 @@
       "slug": "aegus-platyodon-tohyamai",
       "name_latin": "Aegus platyodon tohyamai",
       "name": {
-        "ja": "????",
+        "ja": "トウヤマ",
         "en": "Aegus platyodon tohyamai",
         "zh": "东山",
         "ko": "토야마",
@@ -272,7 +272,7 @@
         "fr": "Tohyamai"
       },
       "region": {
-        "ja": "????????????",
+        "ja": "モルッカ諸島（セラム島）",
         "en": "Moluccas (Seram Island)",
         "zh": "摩鹿加群岛（塞兰岛）",
         "ko": "몰루카 제도(세람섬)",
@@ -281,7 +281,7 @@
         "fr": "Moluques (île de Seram)"
       },
       "description": {
-        "ja": "Bartolozzi ?????????????????????????????????????????",
+        "ja": "Bartolozzi らのチェックリストでは、モルッカ諸島のうちセラム島からの亜種として整理されている。",
         "en": "No dedicated image registered yet. This is the Seram Island subspecies described by Nagai in 1994.",
         "zh": "尚未登记专用图片。本亚种由 Nagai 于 1994 年记载，为塞兰岛产的类型。",
         "ko": "전용 이미지는 아직 등록되어 있지 않습니다. Nagai가 1994년에 기재한 세람섬의 아종입니다。",
@@ -312,7 +312,7 @@
         "fr": "Aegus platyodon bellus"
       },
       "region": {
-        "ja": "??????????????????? / ????????????????? / ??????????",
+        "ja": "ビスマルク諸島（ニューアイルランド島） / ニューギニア（インドネシア領パプア / パプアニューギニア）",
         "en": "Bismarck Archipelago (New Ireland) / New Guinea (Indonesian Papua / Papua New Guinea)",
         "zh": "俾斯麦群岛（新爱尔兰岛） / 新几内亚（印度尼西亚领巴布亚 / 巴布亚新几内亚）",
         "ko": "비스마르크 제도(뉴아일랜드섬) / 뉴기니(인도네시아령 파푸아 / 파푸아뉴기니)",
@@ -321,7 +321,7 @@
         "fr": "Archipel Bismarck (Nouvelle-Irlande) / Nouvelle-Guinée (Papouasie indonésienne / Papouasie-Nouvelle-Guinée)"
       },
       "description": {
-        "ja": "Bartolozzi ??????????????????????????????????????????????????????????? Finch Haven?Watut?Aseki?Maprik ??????????????",
+        "ja": "Bartolozzi らのチェックリストでは、ニューアイルランド島とニューギニアに分布する亜種として整理されている。パプアニューギニア側では Finch Haven、Watut、Aseki、Maprik などの標本記録が確認できる。",
         "en": "No dedicated image registered yet. Published records place this subspecies in New Ireland and New Guinea, with Papua New Guinea specimen records such as Finch Haven, Watut, Aseki, and Maprik.",
         "zh": "尚未登记专用图片。文献记录显示本亚种分布于新爱尔兰岛与新几内亚，在巴布亚新几内亚侧有 Finch Haven、Watut、Aseki、Maprik 等标本记录。",
         "ko": "전용 이미지는 아직 등록되어 있지 않습니다. 문헌상 이 아종은 뉴아일랜드와 뉴기니에서 기록되며, PNG 측에서는 Finch Haven, Watut, Aseki, Maprik 등의 표본 기록이 확인됩니다.",
